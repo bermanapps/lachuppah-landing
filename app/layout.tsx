@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Heebo } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -7,10 +7,16 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+const heebo = Heebo({
+  variable: "--font-heebo",
+  subsets: ["hebrew", "latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
+
 export const metadata: Metadata = {
-  title: "LaChuppah — The Shidduch Management Platform",
+  title: "LaChupah — Dignified Shidduchim for Torah-Observant Singles",
   description:
-    "LaChuppah helps shadchanim, coaches, and shidduch organizations manage singles, track matches, and guide couples from first suggestion to the chuppah.",
+    "LaChupah is a private, community-based shidduch platform for Torah-observant singles and their families. Every profile is personally reviewed, every introduction requires full mutual consent.",
 };
 
 export default function RootLayout({
@@ -19,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
+    <html lang="en" className={`${geistSans.variable} ${heebo.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
