@@ -773,59 +773,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SCREENSHOTS ── */}
-      <section className="bg-[#FDFAF6] py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="text-sm font-semibold text-[#C9923F] uppercase tracking-widest mb-3">
-              {t.screenshots.sectionLabel}
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1E3A5F] mb-4">
-              {t.screenshots.headline}
-            </h2>
-            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              {t.screenshots.subheading}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {t.mockScreens.map((screen, si) => (
-              <div
-                key={si}
-                className="rounded-3xl overflow-hidden shadow-lg border border-stone-200 bg-white flex flex-col"
-              >
-                <div className={`bg-gradient-to-r ${screen.gradient} px-5 py-4 text-white`}>
-                  <div className="flex items-center gap-1.5 mb-3 opacity-40">
-                    <div className="w-2.5 h-2.5 rounded-full bg-white" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-white" />
-                    <div className="w-2.5 h-2.5 rounded-full bg-white" />
-                    <div className="flex-1 bg-white/40 rounded-full h-4 ml-1" />
-                  </div>
-                  <div className="text-xs opacity-70 mb-0.5">{t.screenshots.appLabel}</div>
-                  <div className="font-semibold text-base">{screen.title}</div>
-                </div>
-                <div className="p-4 space-y-2 flex-1">
-                  {screen.rows.map((row, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center gap-3 p-2.5 rounded-xl bg-stone-50 border border-stone-100"
-                    >
-                      <div className="w-8 h-8 rounded-full bg-[#1E3A5F]/10 text-[#1E3A5F] text-xs font-bold flex items-center justify-center flex-shrink-0">
-                        {row.initials}
-                      </div>
-                      <span className="text-sm text-stone-700 font-medium flex-1">{row.name}</span>
-                      <span className="text-xs text-stone-400 font-medium">{row.tag}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="px-5 pb-5 pt-2">
-                  <p className="text-xs text-stone-400 leading-relaxed">{screen.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── ABOUT — table.jpg as elegant side image ── */}
       <section id="about" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
