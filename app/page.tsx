@@ -206,11 +206,11 @@ const content = {
       sectionLabel: "Available Now",
       headline: "Download LaChupah Today",
       subheading:
-        "The app gives you push notifications so you never miss an introduction, along with the full LaChupah experience. Available on iPhone and Android.",
+        "Create your profile, browse introductions, manage everything — all from the app. Available on iPhone and Android. Prefer a bigger screen? You can also access LaChupah on the web.",
       appStore: { above: "Launching Soon on the", title: "App Store" },
       googlePlay: { above: "Launching Soon on", title: "Google Play" },
-      webNote: "Prefer to set up your profile first?",
-      webCta: "Get started on the web →",
+      webNote: "Prefer to use a browser?",
+      webCta: "Open the web app →",
     },
     contactForm: {
       sectionLabel: "Get in Touch",
@@ -444,11 +444,11 @@ const content = {
       sectionLabel: "זמין עכשיו",
       headline: "הורידו את לחופה היום",
       subheading:
-        "האפליקציה שולחת לכם התראות push כדי שלא תפספסו אף היכרות — ומעניקה את החוויה המלאה של לחופה. זמין ל-iPhone ואנדרואיד.",
+        "צרו פרופיל, עיינו בהיכרויות, נהלו הכל — ישירות מהאפליקציה. זמין ל-iPhone ואנדרואיד. מעדיפים מסך גדול? ניתן להשתמש בלחופה גם דרך הדפדפן.",
       appStore: { above: "בקרוב —", title: "App Store" },
       googlePlay: { above: "בקרוב —", title: "Google Play" },
-      webNote: "מעדיפים להגדיר את הפרופיל תחילה?",
-      webCta: "התחילו באתר ←",
+      webNote: "מעדיפים להשתמש בדפדפן?",
+      webCta: "פתחו את גרסת האתר ←",
     },
     contactForm: {
       sectionLabel: "צרו קשר",
