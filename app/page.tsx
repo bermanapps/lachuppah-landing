@@ -570,14 +570,6 @@ export default function Home() {
               <a href="#features" className="text-stone-600 hover:text-[#1E3A5F] text-sm font-medium transition-colors">{t.nav.features}</a>
               <a href="#about" className="text-stone-600 hover:text-[#1E3A5F] text-sm font-medium transition-colors">{t.nav.about}</a>
               <a href="#faq" className="text-stone-600 hover:text-[#1E3A5F] text-sm font-medium transition-colors">{t.nav.faq}</a>
-              <a
-                href="https://admin.lachuppah.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-stone-400 hover:text-[#1E3A5F] text-sm font-medium transition-colors border-s border-stone-200 ps-6"
-              >
-                {t.nav.admin}
-              </a>
             </nav>
 
             <div className="flex items-center gap-3">
