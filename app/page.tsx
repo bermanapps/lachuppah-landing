@@ -21,8 +21,8 @@ const content = {
     },
     hero: {
       badge: "A dignified, private platform for Torah-observant singles",
-      headlineLine1: "Shidduchim the Way They",
-      headlineLine2: "Were Meant to Be",
+      headlineLine1: "Shidduchim with Dignity.",
+      headlineLine2: "Every Time.",
       subheading:
         "LaChupah is a private, community-based shidduch (matchmaking) platform for Torah-observant singles and their families — worldwide. Every profile is personally reviewed, every introduction requires full mutual consent, and you choose whether to connect directly or through a shadchan — your privacy protected either way.",
       cta1: "Create Your Profile",
@@ -260,8 +260,8 @@ const content = {
     },
     hero: {
       badge: "פלטפורמה פרטית ומכובדת לרווקים שומרי תורה",
-      headlineLine1: "שידוכים כפי שהם",
-      headlineLine2: "צריכים להיות",
+      headlineLine1: "שידוכים בכבוד.",
+      headlineLine2: "תמיד.",
       subheading:
         "לחופה היא פלטפורמת שידוכים קהילתית ופרטית לרווקים שומרי תורה ומשפחותיהם — בכל העולם. כל פרופיל נבדק אישית, כל היכרות מחייבת הסכמה הדדית מלאה, ואתם בוחרים אם להתחבר ישירות או דרך שדכן — הפרטיות שלכם מוגנת בכל מקרה.",
       cta1: "צרו את הפרופיל שלכם",
