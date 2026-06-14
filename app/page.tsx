@@ -17,13 +17,14 @@ const content = {
       about: "About",
       faq: "FAQ",
       createProfile: "Create Profile",
+      admin: "Admin Login",
     },
     hero: {
       badge: "A dignified, private platform for Torah-observant singles",
       headlineLine1: "Shidduchim the Way They",
       headlineLine2: "Were Meant to Be",
       subheading:
-        "LaChupah is a private, community-based shidduch (matchmaking) platform for Torah-observant singles and their families. Every profile is personally reviewed, every introduction requires full mutual consent, and you choose whether to connect directly or through a shadchan — your privacy protected either way.",
+        "LaChupah is a private, community-based shidduch (matchmaking) platform for Torah-observant singles and their families — worldwide. Every profile is personally reviewed, every introduction requires full mutual consent, and you choose whether to connect directly or through a shadchan — your privacy protected either way.",
       cta1: "Create Your Profile",
       cta2: "See How It Works",
       ctaArrow: "→",
@@ -32,7 +33,7 @@ const content = {
       { value: "Human-Reviewed", label: "Every Profile" },
       { value: "Mutual Consent", label: "Required for All Contact" },
       { value: "Shadchan Option", label: "Built In, Not Bolted On" },
-      { value: "Free", label: "To Join and Browse" },
+      { value: "Worldwide", label: "Open to Jewish Communities Globally" },
     ],
     howItWorks: {
       sectionLabel: "The Process",
@@ -92,7 +93,7 @@ const content = {
         {
           title: "Live Dating Status",
           description:
-            "Every profile displays a current dating status — actively looking, currently dating, engaged, or married. This keeps the platform accurate and respectful of everyone's time, and ensures that when you reach out, the person is genuinely available.",
+            "Every profile displays a current dating status — actively looking, currently dating, engaged, or married. The app sends you push notifications so you're updated the moment something changes. This keeps the platform accurate and respectful of everyone's time.",
         },
         {
           title: "For All Observant Communities",
@@ -166,7 +167,7 @@ const content = {
         "Shadchan route built in",
         "Mobile & tablet ready",
         "Parent-managed profiles",
-        "Free to join and browse",
+        "Available worldwide",
       ],
     },
     kotel: {
@@ -199,19 +200,17 @@ const content = {
           q: "Is LaChupah only for one type of community?",
           a: "Not at all. LaChupah serves the full range of Torah-observant communities — Yeshivish, Chareidi, Chabad, Dati Leumi, Chardal, Modern Orthodox, and others. Each profile includes the individual's background and hashkafah (religious worldview), so users can find compatibility in a way that is meaningful to them.",
         },
-        {
-          q: "Is it free to use?",
-          a: "Yes. Creating a profile and browsing on LaChupah is free. We are committed to keeping the platform accessible to the community it serves. We may introduce optional features in the future, but the core platform will remain free.",
-        },
       ],
     },
     download: {
       sectionLabel: "Available Now",
       headline: "Download LaChupah Today",
       subheading:
-        "Free to join and browse. Available on iPhone and Android. Create your profile and take the first step — with dignity, with privacy, and with community.",
-      appStore: { above: "Download on the", title: "App Store" },
-      googlePlay: { above: "Get it on", title: "Google Play" },
+        "The app gives you push notifications so you never miss an introduction, along with the full LaChupah experience. Available on iPhone and Android.",
+      appStore: { above: "Launching Soon on the", title: "App Store" },
+      googlePlay: { above: "Launching Soon on", title: "Google Play" },
+      webNote: "Prefer to set up your profile first?",
+      webCta: "Get started on the web →",
     },
     whatsapp: {
       headline: "We're Here to Help",
@@ -225,6 +224,7 @@ const content = {
         { label: "About", href: "#about" },
         { label: "FAQ", href: "#faq" },
         { label: "Contact Us", href: "#contact" },
+        { label: "Admin Portal", href: "https://admin.lachuppah.app" },
       ],
       whatsapp: "WhatsApp Support",
       copyright: "© 2026 LaChupah. All rights reserved.",
@@ -241,13 +241,14 @@ const content = {
       about: "אודות",
       faq: "שאלות נפוצות",
       createProfile: "צור פרופיל",
+      admin: "כניסת מנהל",
     },
     hero: {
       badge: "פלטפורמה פרטית ומכובדת לרווקים שומרי תורה",
       headlineLine1: "שידוכים כפי שהם",
       headlineLine2: "צריכים להיות",
       subheading:
-        "לחופה היא פלטפורמת שידוכים קהילתית ופרטית לרווקים שומרי תורה ומשפחותיהם. כל פרופיל נבדק אישית, כל היכרות מחייבת הסכמה הדדית מלאה, ואתם בוחרים אם להתחבר ישירות או דרך שדכן — הפרטיות שלכם מוגנת בכל מקרה.",
+        "לחופה היא פלטפורמת שידוכים קהילתית ופרטית לרווקים שומרי תורה ומשפחותיהם — בכל העולם. כל פרופיל נבדק אישית, כל היכרות מחייבת הסכמה הדדית מלאה, ואתם בוחרים אם להתחבר ישירות או דרך שדכן — הפרטיות שלכם מוגנת בכל מקרה.",
       cta1: "צרו את הפרופיל שלכם",
       cta2: "ראו איך זה עובד",
       ctaArrow: "←",
@@ -256,7 +257,7 @@ const content = {
       { value: "נבדק אנושית", label: "כל פרופיל" },
       { value: "הסכמה הדדית", label: "נדרשת לכל קשר" },
       { value: "אפשרות שדכן", label: "מובנית מהיסוד" },
-      { value: "חינם", label: "להצטרפות וגלישה" },
+      { value: "בכל העולם", label: "פתוח לקהילות יהודיות בכל מקום" },
     ],
     howItWorks: {
       sectionLabel: "התהליך",
@@ -316,7 +317,7 @@ const content = {
         {
           title: "סטטוס שידוכים עדכני",
           description:
-            "כל פרופיל מציג סטטוס שידוכים נוכחי — מחפש באופן פעיל, בתהליך שידוכים, מאורס/ת, או נשוי/נשואה. זה שומר על הפלטפורמה מדויקת ומכבדת את זמנם של כולם, ומוודא שכשפונים — האדם פנוי באמת.",
+            "כל פרופיל מציג סטטוס שידוכים נוכחי — מחפש באופן פעיל, בתהליך שידוכים, מאורס/ת, או נשוי/נשואה. האפליקציה שולחת התראות push ברגע שמשהו מתעדכן — כדי שתמיד תהיו מעודכנים ולא תפספסו אף הזדמנות.",
         },
         {
           title: "לכל הקהילות התורניות",
@@ -390,7 +391,7 @@ const content = {
         "אפשרות שדכן מובנית",
         "מותאם לנייד וטאבלט",
         "פרופילים מנוהלים על ידי הורים",
-        "חינם להצטרפות וגלישה",
+        "זמין בכל העולם",
       ],
     },
     kotel: {
@@ -422,19 +423,17 @@ const content = {
           q: "האם לחופה מיועדת לסוג קהילה מסוים?",
           a: 'כלל לא. לחופה משרתת את כל מגוון הקהילות שומרות התורה — חרדים, ליטאים, חב"ד, דתי לאומי, חרדל, מודרן אורתודוקס ועוד. כל פרופיל כולל את הרקע והשקפת עולמו של הפרט, כך שמשתמשים יכולים למצוא התאמה באופן משמעותי עבורם.',
         },
-        {
-          q: "האם זה חינם?",
-          a: "כן. יצירת פרופיל וגלישה בלחופה הם חינם. אנחנו מחויבים לשמור על הפלטפורמה נגישה לקהילה שהיא משרתת. ייתכן שנציג תכונות אופציונאליות בעתיד, אך הפלטפורמה הבסיסית תישאר חינמית.",
-        },
       ],
     },
     download: {
       sectionLabel: "זמין עכשיו",
       headline: "הורידו את לחופה היום",
       subheading:
-        "חינם להצטרפות וגלישה. זמין ל-iPhone ואנדרואיד. צרו את הפרופיל שלכם וצאו לדרך — בכבוד, בפרטיות ועם קהילה.",
-      appStore: { above: "הורידו ב", title: "App Store" },
-      googlePlay: { above: "הורידו ב", title: "Google Play" },
+        "האפליקציה שולחת לכם התראות push כדי שלא תפספסו אף היכרות — ומעניקה את החוויה המלאה של לחופה. זמין ל-iPhone ואנדרואיד.",
+      appStore: { above: "בקרוב —", title: "App Store" },
+      googlePlay: { above: "בקרוב —", title: "Google Play" },
+      webNote: "מעדיפים להגדיר את הפרופיל תחילה?",
+      webCta: "התחילו באתר ←",
     },
     whatsapp: {
       headline: "אנחנו כאן לעזור",
@@ -448,6 +447,7 @@ const content = {
         { label: "אודות", href: "#about" },
         { label: "שאלות נפוצות", href: "#faq" },
         { label: "צרו קשר", href: "#contact" },
+        { label: "פורטל מנהל", href: "https://admin.lachuppah.app" },
       ],
       whatsapp: "תמיכה בוואטסאפ",
       copyright: "© 2026 לחופה. כל הזכויות שמורות.",
@@ -525,6 +525,14 @@ export default function Home() {
               <a href="#features" className="text-stone-600 hover:text-[#1E3A5F] text-sm font-medium transition-colors">{t.nav.features}</a>
               <a href="#about" className="text-stone-600 hover:text-[#1E3A5F] text-sm font-medium transition-colors">{t.nav.about}</a>
               <a href="#faq" className="text-stone-600 hover:text-[#1E3A5F] text-sm font-medium transition-colors">{t.nav.faq}</a>
+              <a
+                href="https://admin.lachuppah.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-stone-400 hover:text-[#1E3A5F] text-sm font-medium transition-colors border-s border-stone-200 ps-6"
+              >
+                {t.nav.admin}
+              </a>
             </nav>
 
             <div className="flex items-center gap-3">
@@ -893,7 +901,9 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="#"
+              href="https://apps.apple.com/app/id6762863228"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-4 bg-white/15 hover:bg-white/25 border border-white/30 text-white px-7 py-4 rounded-2xl transition-colors shadow-md backdrop-blur-sm"
             >
               <svg className="w-8 h-8 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
@@ -918,6 +928,19 @@ export default function Home() {
                 <div className="text-xs text-blue-200">{t.download.googlePlay.above}</div>
                 <div className="text-lg font-semibold leading-tight">{t.download.googlePlay.title}</div>
               </div>
+            </a>
+          </div>
+
+          {/* Web app fallback — subordinate to store buttons */}
+          <div className="mt-8 pt-6 border-t border-white/15 text-center">
+            <p className="text-blue-300 text-sm mb-2">{t.download.webNote}</p>
+            <a
+              href="https://app.lachuppah.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/70 hover:text-white text-sm underline underline-offset-4 transition-colors"
+            >
+              {t.download.webCta}
             </a>
           </div>
         </div>
