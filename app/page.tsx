@@ -610,7 +610,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-40 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/15 border border-white/25 rounded-full px-4 py-1.5 text-sm font-medium text-[#F0C87A] mb-8">
+          <div className="inline-flex items-center gap-2 bg-[#1E3A5F]/80 backdrop-blur-sm border border-white/30 rounded-full px-4 py-1.5 text-sm font-medium text-[#F0C87A] mb-8">
             <span>✦</span>
             <span>{t.hero.badge}</span>
           </div>
