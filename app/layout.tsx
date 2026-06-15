@@ -14,9 +14,9 @@ const heebo = Heebo({
 });
 
 export const metadata: Metadata = {
-  title: "LaChupah — Dignified Shidduchim for Torah-Observant Singles",
+  title: "LaChuppah — Dignified Shidduchim for Torah-Observant Singles",
   description:
-    "LaChupah is a private, community-based shidduch platform for Torah-observant singles and their families. Every profile is personally reviewed, every introduction requires full mutual consent.",
+    "LaChuppah is a private, community-based shidduch platform for Torah-observant singles and their families. Every profile is personally reviewed, every introduction requires full mutual consent.",
 };
 
 export default function RootLayout({

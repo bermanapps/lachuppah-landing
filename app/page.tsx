@@ -24,7 +24,7 @@ const content = {
       headlineLine1: "Shidduchim with Dignity.",
       headlineLine2: "Every Time.",
       subheading:
-        "LaChupah is a private, community-based shidduch (matchmaking) platform for Torah-observant singles and their families — worldwide. Every profile is personally reviewed, every introduction requires full mutual consent, and you choose whether to connect directly or through a shadchan — your privacy protected either way.",
+        "LaChuppah is a private, community-based shidduch (matchmaking) platform for Torah-observant singles and their families — worldwide. Every profile is personally reviewed, every introduction requires full mutual consent, and you choose whether to connect directly or through a shadchan — your privacy protected either way.",
       cta1: "Create Your Profile",
       cta2: "See How It Works",
       ctaArrow: "→",
@@ -49,7 +49,7 @@ const content = {
         {
           step: "02",
           title: "Personal Review and Approval",
-          desc: "Before your profile goes live, it is personally reviewed by the LaChupah team. We check for sincerity, completeness, and suitability for our community. This is not an automated filter — it is a human being reading your submission and ensuring that everyone on LaChupah belongs there.",
+          desc: "Before your profile goes live, it is personally reviewed by the LaChuppah team. We check for sincerity, completeness, and suitability for our community. This is not an automated filter — it is a human being reading your submission and ensuring that everyone on LaChuppah belongs there.",
         },
         {
           step: "03",
@@ -59,16 +59,16 @@ const content = {
         {
           step: "04",
           title: "Connect on Your Terms",
-          desc: "If you choose direct contact, both parties must independently accept before either side sees the other's contact details. If you prefer shadchan-facilitated contact, a registered LaChupah shadchan manages the entire introduction — reaching out to both parties, guiding the process, and keeping your details private throughout.",
+          desc: "If you choose direct contact, both parties must independently accept before either side sees the other's contact details. If you prefer shadchan-facilitated contact, a registered LaChuppah shadchan manages the entire introduction — reaching out to both parties, guiding the process, and keeping your details private throughout.",
         },
       ],
     },
     divider: "Every introduction made with care. Every profile reviewed with purpose.",
     features: {
-      sectionLabel: "Why LaChupah",
+      sectionLabel: "Why LaChuppah",
       headline: "Built Around Jewish Values",
       subheading:
-        "Every feature on LaChupah exists for a reason — to make the shidduch process more dignified, more private, and more in keeping with how our community does things.",
+        "Every feature on LaChuppah exists for a reason — to make the shidduch process more dignified, more private, and more in keeping with how our community does things.",
       items: [
         {
           title: "Privacy and Mutual Consent",
@@ -78,7 +78,7 @@ const content = {
         {
           title: "Shadchan-Facilitated Introductions",
           description:
-            "For families who prefer all contact to go through a shadchan (matchmaker), LaChupah offers exactly that — not as an add-on, but as a core feature. A registered LaChupah shadchan manages the introduction, contacts both parties, and ensures your details are never revealed to the other side.",
+            "For families who prefer all contact to go through a shadchan (matchmaker), LaChuppah offers exactly that — not as an add-on, but as a core feature. A registered LaChuppah shadchan manages the introduction, contacts both parties, and ensures your details are never revealed to the other side.",
         },
         {
           title: "Parent and Guardian Management",
@@ -88,7 +88,7 @@ const content = {
         {
           title: "Every Profile, Human-Reviewed",
           description:
-            "Every profile submitted to LaChupah is personally reviewed by our team before it is published. We verify that each submission is genuine, complete, and appropriate for our community. There are no bots, no fake accounts — only real, sincere people.",
+            "Every profile submitted to LaChuppah is personally reviewed by our team before it is published. We verify that each submission is genuine, complete, and appropriate for our community. There are no bots, no fake accounts — only real, sincere people.",
         },
         {
           title: "Live Dating Status",
@@ -98,14 +98,14 @@ const content = {
         {
           title: "For All Observant Communities",
           description:
-            "LaChupah serves the full range of Torah-observant communities — Yeshivish, Chareidi, Chabad, Dati Leumi, Chardal, Modern Orthodox, and others. We are one community with many beautiful expressions, and all are at home here.",
+            "LaChuppah serves the full range of Torah-observant communities — Yeshivish, Chareidi, Chabad, Dati Leumi, Chardal, Modern Orthodox, and others. We are one community with many beautiful expressions, and all are at home here.",
         },
       ],
     },
     ring: {
       sectionLabel: "Our Commitment",
       headline: "Serious shidduchim, done with dignity",
-      body: "LaChupah is not a dating app. It is a platform built for people who take the shidduch process seriously — and for families who want to be involved every step of the way. No shortcuts. No compromises on tznius (modesty). No contact without consent. Just a thoughtful, private, community-supported path to the chuppah.",
+      body: "LaChuppah is not a dating app. It is a platform built for people who take the shidduch process seriously — and for families who want to be involved every step of the way. No shortcuts. No compromises on tznius (modesty). No contact without consent. Just a thoughtful, private, community-supported path to the chuppah.",
       cta: "Create Your Profile",
       ctaArrow: "→",
     },
@@ -114,7 +114,7 @@ const content = {
       headline: "Clear, Private, and Easy to Use",
       subheading:
         "Designed to feel straightforward and respectful — so you can focus on finding the right shidduch, not on figuring out the software.",
-      appLabel: "LaChupah",
+      appLabel: "LaChuppah",
     },
     mockScreens: [
       {
@@ -152,10 +152,10 @@ const content = {
       },
     ],
     about: {
-      sectionLabel: "About LaChupah",
+      sectionLabel: "About LaChuppah",
       headline: "A Platform Built by the Community",
       body1:
-        "LaChupah was born from a simple but deeply felt need. The shidduch process is one of the most meaningful endeavours in Jewish life — and yet the tools available to support it often felt out of step with the values of the people using them. We are members of the community ourselves, and we built the platform we wished existed.",
+        "LaChuppah was born from a simple but deeply felt need. The shidduch process is one of the most meaningful endeavours in Jewish life — and yet the tools available to support it often felt out of step with the values of the people using them. We are members of the community ourselves, and we built the platform we wished existed.",
       body2:
         "At the heart of everything we do is tznius (modesty). Contact details are never displayed on a profile. No introduction is ever made without the full, voluntary consent of both parties. And for families who want all contact to go through a shadchan — that option is not a workaround. It is a core feature, built in from the beginning.",
       body3:
@@ -186,27 +186,27 @@ const content = {
         },
         {
           q: "What is the difference between direct contact and contact via a shadchan?",
-          a: "With direct contact, both parties independently review each other's profile and decide whether to accept. Only once both have accepted does either person receive the other's contact details. With shadchan-facilitated contact, a registered LaChupah shadchan manages the entire introduction — reaching out to both parties, guiding the process, and marking the match as confirmed once both agree to proceed. In this case, neither party's contact details are ever shared with the other.",
+          a: "With direct contact, both parties independently review each other's profile and decide whether to accept. Only once both have accepted does either person receive the other's contact details. With shadchan-facilitated contact, a registered LaChuppah shadchan manages the entire introduction — reaching out to both parties, guiding the process, and marking the match as confirmed once both agree to proceed. In this case, neither party's contact details are ever shared with the other.",
         },
         {
           q: "Can my parent or guardian manage my profile on my behalf?",
-          a: "Yes, absolutely. Parent- and guardian-managed profiles are fully supported on LaChupah. A parent or guardian can create, update, and manage a profile on behalf of their son or daughter. This is a common and respected approach in many communities, and our platform is designed to accommodate it naturally.",
+          a: "Yes, absolutely. Parent- and guardian-managed profiles are fully supported on LaChuppah. A parent or guardian can create, update, and manage a profile on behalf of their son or daughter. This is a common and respected approach in many communities, and our platform is designed to accommodate it naturally.",
         },
         {
           q: "How long does profile approval take?",
           a: "We aim to review and approve profiles within one to three business days. Every submission is personally reviewed by a member of our team. If your profile requires any additional information or adjustments, we will be in touch directly.",
         },
         {
-          q: "Is LaChupah only for one type of community?",
-          a: "Not at all. LaChupah serves the full range of Torah-observant communities — Yeshivish, Chareidi, Chabad, Dati Leumi, Chardal, Modern Orthodox, and others. Each profile includes the individual's background and hashkafah (religious worldview), so users can find compatibility in a way that is meaningful to them.",
+          q: "Is LaChuppah only for one type of community?",
+          a: "Not at all. LaChuppah serves the full range of Torah-observant communities — Yeshivish, Chareidi, Chabad, Dati Leumi, Chardal, Modern Orthodox, and others. Each profile includes the individual's background and hashkafah (religious worldview), so users can find compatibility in a way that is meaningful to them.",
         },
       ],
     },
     download: {
       sectionLabel: "Available Now",
-      headline: "Download LaChupah Today",
+      headline: "Download LaChuppah Today",
       subheading:
-        "Create your profile, browse introductions, manage everything — all from the app. Available on iPhone and Android. Prefer a bigger screen? You can also access LaChupah on the web.",
+        "Create your profile, browse introductions, manage everything — all from the app. Available on iPhone and Android. Prefer a bigger screen? You can also access LaChuppah on the web.",
       appStore: { above: "Launching Soon on the", title: "App Store" },
       googlePlay: { above: "Launching Soon on", title: "Google Play" },
       webNote: "Prefer to use a browser?",
@@ -242,9 +242,9 @@ const content = {
         { label: "Contact Us", href: "#contact" },
         { label: "Admin Portal", href: "https://admin.lachuppah.app" },
       ],
-      copyright: "© 2026 LaChupah. All rights reserved.",
+      copyright: "© 2026 LaChuppah. All rights reserved.",
       legal:
-        "LaChupah is a community platform and is not a licensed matchmaking agency. All introductions are made voluntarily between consenting parties.",
+        "LaChuppah is a community platform and is not a licensed matchmaking agency. All introductions are made voluntarily between consenting parties.",
     },
   },
 
@@ -553,14 +553,14 @@ export default function Home() {
             <a href="#" className="flex items-center gap-3">
               <Image
                 src="/lachuppah-logo.png"
-                alt="LaChupah"
+                alt="LaChuppah"
                 width={36}
                 height={36}
                 className="object-contain"
                 priority
               />
               <div>
-                <div className="text-xl font-bold text-[#1E3A5F] leading-tight">LaChupah</div>
+                <div className="text-xl font-bold text-[#1E3A5F] leading-tight">LaChuppah</div>
                 <div className="hidden sm:block text-xs text-stone-400 leading-tight">{t.nav.tagline}</div>
               </div>
             </a>
@@ -1056,12 +1056,12 @@ export default function Home() {
             <a href="#" className="flex items-center gap-3">
               <Image
                 src="/lachuppah-logo.png"
-                alt="LaChupah"
+                alt="LaChuppah"
                 width={36}
                 height={36}
                 className="object-contain opacity-90"
               />
-              <span className="text-xl font-bold">LaChupah</span>
+              <span className="text-xl font-bold">LaChuppah</span>
             </a>
             <nav className="flex flex-wrap justify-center gap-6 text-sm text-blue-200">
               {t.footer.navLinks.map((link) => (
