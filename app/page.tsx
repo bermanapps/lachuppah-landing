@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 type Lang = "en" | "he";
@@ -24,7 +24,7 @@ const content = {
       headlineLine1: "Shidduchim with Dignity.",
       headlineLine2: "Every Time.",
       subheading:
-        "LaChuppah is a private, community-based shidduch (matchmaking) platform for Torah-observant singles and their families — worldwide. Every profile is personally reviewed, every introduction requires full mutual consent, and you choose whether to connect directly or through a shadchan — your privacy protected either way.",
+        "A private, community-based platform for Torah-observant singles and families — worldwide. Human-reviewed profiles. Full mutual consent. Your privacy, always protected.",
       cta1: "Create Your Profile",
       cta2: "See How It Works",
       ctaArrow: "→",
@@ -35,31 +35,41 @@ const content = {
       { value: "Shadchan Option", label: "Built In, Not Bolted On" },
       { value: "Worldwide", label: "Open to Jewish Communities Globally" },
     ],
+    community: {
+      sectionLabel: "Our Community",
+      headline: "For Every Observant Community",
+      subheading: "One platform, every beautiful expression of Torah-observant life.",
+      photos: [
+        { src: "/images/kallah.png", label: "Brides & Singles", tag: "All Communities" },
+        { src: "/images/charedi.png", label: "Chareidi", tag: "Traditional" },
+        { src: "/images/leumi.png", label: "Dati Leumi", tag: "Religious Zionist" },
+        { src: "/images/chabad.png", label: "Chabad", tag: "Lubavitch" },
+      ],
+    },
     howItWorks: {
       sectionLabel: "The Process",
       headline: "Simple, Private, and Community-Driven",
-      subheading:
-        "From first profile to confirmed introduction — every step is designed around your dignity and privacy.",
+      subheading: "From first profile to confirmed introduction — every step built around dignity and privacy.",
       steps: [
         {
           step: "01",
           title: "Build Your Profile",
-          desc: "You — or a parent or guardian on your behalf — create a detailed shidduch profile that reflects who you are: your background, family, hashkafah (outlook and values), and what you're looking for. The profile is thorough, because a meaningful shidduch deserves more than a few lines.",
+          desc: "You — or a parent on your behalf — create a detailed shidduch profile: background, family, hashkafah, and what you're looking for.",
         },
         {
           step: "02",
-          title: "Personal Review and Approval",
-          desc: "Before your profile goes live, it is personally reviewed by the LaChuppah team. We check for sincerity, completeness, and suitability for our community. This is not an automated filter — it is a human being reading your submission and ensuring that everyone on LaChuppah belongs there.",
+          title: "Personal Review",
+          desc: "Before going live, a member of our team personally reviews every profile for sincerity, completeness, and suitability.",
         },
         {
           step: "03",
-          title: "Browse and Express Interest",
-          desc: "Once approved, you can browse live profiles and express interest in those that seem like a good fit. When you find someone you'd like to learn more about, you choose how to proceed — directly, or through a shadchan.",
+          title: "Browse & Express Interest",
+          desc: "Browse approved profiles and express interest. Choose whether to connect directly or through a shadchan.",
         },
         {
           step: "04",
           title: "Connect on Your Terms",
-          desc: "If you choose direct contact, both parties must independently accept before either side sees the other's contact details. If you prefer shadchan-facilitated contact, a registered LaChuppah shadchan manages the entire introduction — reaching out to both parties, guiding the process, and keeping your details private throughout.",
+          desc: "Direct contact only happens once both parties independently accept. Or let a shadchan manage the introduction — your privacy protected either way.",
         },
       ],
     },
@@ -67,99 +77,50 @@ const content = {
     features: {
       sectionLabel: "Why LaChuppah",
       headline: "Built Around Jewish Values",
-      subheading:
-        "Every feature on LaChuppah exists for a reason — to make the shidduch process more dignified, more private, and more in keeping with how our community does things.",
+      subheading: "Every feature exists to make the shidduch process more dignified, more private, and more in keeping with our community's values.",
       items: [
         {
-          title: "Privacy and Mutual Consent",
-          description:
-            "Your contact information is never visible on your profile and is never shared without your explicit agreement. Direct contact only becomes possible after both parties have independently accepted — mutual consent is not a setting you configure, it is built into how the platform works.",
+          title: "Privacy & Mutual Consent",
+          description: "Your contact details are never visible on your profile and are never shared without your explicit agreement. Mutual consent is not a setting — it's built into how the platform works.",
         },
         {
           title: "Shadchan-Facilitated Introductions",
-          description:
-            "For families who prefer all contact to go through a shadchan (matchmaker), LaChuppah offers exactly that — not as an add-on, but as a core feature. A registered LaChuppah shadchan manages the introduction, contacts both parties, and ensures your details are never revealed to the other side.",
+          description: "For families who prefer all contact to go through a shadchan, LaChuppah offers exactly that — not as an add-on, but as a core feature.",
         },
         {
-          title: "Parent and Guardian Management",
-          description:
-            "Parents and guardians can create and manage profiles on behalf of their sons or daughters. Because in many communities, shidduchim are a family endeavour from the very beginning — and our platform is built to reflect that reality with respect and care.",
+          title: "Parent & Guardian Management",
+          description: "Parents and guardians can create and manage profiles on behalf of their sons or daughters — because shidduchim are a family endeavour from the very beginning.",
         },
         {
           title: "Every Profile, Human-Reviewed",
-          description:
-            "Every profile submitted to LaChuppah is personally reviewed by our team before it is published. We verify that each submission is genuine, complete, and appropriate for our community. There are no bots, no fake accounts — only real, sincere people.",
+          description: "Every profile is personally reviewed by our team before it goes live. No bots, no fake accounts — only real, sincere people.",
         },
         {
           title: "Live Dating Status",
-          description:
-            "Every profile displays a current dating status — actively looking, currently dating, engaged, or married. The app sends you push notifications so you're updated the moment something changes. This keeps the platform accurate and respectful of everyone's time.",
+          description: "Every profile shows a current status — looking, dating, engaged, or married. Push notifications keep you updated the moment anything changes.",
         },
         {
           title: "For All Observant Communities",
-          description:
-            "LaChuppah serves the full range of Torah-observant communities — Yeshivish, Chareidi, Chabad, Dati Leumi, Chardal, Modern Orthodox, and others. We are one community with many beautiful expressions, and all are at home here.",
+          description: "Yeshivish, Chareidi, Chabad, Dati Leumi, Chardal, Modern Orthodox — LaChuppah serves the full range of Torah-observant communities.",
         },
       ],
     },
     ring: {
       sectionLabel: "Our Commitment",
       headline: "Serious shidduchim, done with dignity",
-      body: "LaChuppah is not a dating app. It is a platform built for people who take the shidduch process seriously — and for families who want to be involved every step of the way. No shortcuts. No compromises on tznius (modesty). No contact without consent. Just a thoughtful, private, community-supported path to the chuppah.",
+      body: "LaChuppah is not a dating app. It is a platform built for people who take the shidduch process seriously — and for families who want to be involved every step of the way. No shortcuts. No compromises on tznius. No contact without consent.",
       cta: "Create Your Profile",
       ctaArrow: "→",
     },
-    screenshots: {
-      sectionLabel: "A Closer Look",
-      headline: "Clear, Private, and Easy to Use",
-      subheading:
-        "Designed to feel straightforward and respectful — so you can focus on finding the right shidduch, not on figuring out the software.",
-      appLabel: "LaChuppah",
-    },
-    mockScreens: [
-      {
-        title: "Browse Profiles",
-        desc: "Search and filter approved profiles by background, community, and hashkafah",
-        gradient: "from-[#1E3A5F] to-[#2D5382]",
-        rows: [
-          { initials: "RL", name: "Ruchie L.", tag: "Looking" },
-          { initials: "SG", name: "Sima G.", tag: "Looking" },
-          { initials: "DK", name: "Devorah K.", tag: "Looking" },
-          { initials: "CW", name: "Chani W.", tag: "New" },
-        ],
-      },
-      {
-        title: "Express Interest",
-        desc: "Choose direct contact or shadchan-facilitated — contact only shared with mutual consent",
-        gradient: "from-[#C9923F] to-[#A8731E]",
-        rows: [
-          { initials: "→", name: "Direct Contact", tag: "Mutual only" },
-          { initials: "S", name: "Via Shadchan", tag: "Private" },
-          { initials: "✓", name: "Both Accepted", tag: "Connected" },
-          { initials: "🔒", name: "Details Shared", tag: "Secure" },
-        ],
-      },
-      {
-        title: "Track Progress",
-        desc: "Stay updated on every introduction — from first interest to confirmed shidduch",
-        gradient: "from-[#2D7A6B] to-[#1E5A4E]",
-        rows: [
-          { initials: "1", name: "Profile Approved", tag: "Done" },
-          { initials: "2", name: "Interest Sent", tag: "Pending" },
-          { initials: "3", name: "Both Accepted", tag: "Active" },
-          { initials: "4", name: "Shidduch Made", tag: "Mazel Tov" },
-        ],
-      },
-    ],
     about: {
       sectionLabel: "About LaChuppah",
       headline: "A Platform Built by the Community",
       body1:
-        "LaChuppah was born from a simple but deeply felt need. The shidduch process is one of the most meaningful endeavours in Jewish life — and yet the tools available to support it often felt out of step with the values of the people using them. We are members of the community ourselves, and we built the platform we wished existed.",
+        "LaChuppah was born from a deeply felt need. The shidduch process is one of the most meaningful endeavours in Jewish life — and yet the tools available often felt out of step with community values. We are members of the community ourselves, and we built the platform we wished existed.",
       body2:
-        "At the heart of everything we do is tznius (modesty). Contact details are never displayed on a profile. No introduction is ever made without the full, voluntary consent of both parties. And for families who want all contact to go through a shadchan — that option is not a workaround. It is a core feature, built in from the beginning.",
+        "At the heart of everything we do is tznius. Contact details are never displayed. No introduction without full, voluntary consent. And for families who want all contact through a shadchan — that is a core feature, built in from the beginning.",
       body3:
-        "We believe sincerity matters more than volume. That is why every profile is personally reviewed before it goes live. We are not trying to be the biggest platform — we are trying to be the most trustworthy one. A place where serious people can find each other with dignity and support.",
+        "We believe sincerity matters more than volume. Every profile is personally reviewed. We are not trying to be the biggest platform — we are trying to be the most trustworthy one.",
       imageAlt: "An elegantly set wedding celebration table",
       checklist: [
         "Built by the community",
@@ -263,7 +224,7 @@ const content = {
       headlineLine1: "שידוכים בכבוד.",
       headlineLine2: "תמיד.",
       subheading:
-        "לחופה היא פלטפורמת שידוכים קהילתית ופרטית לרווקים שומרי תורה ומשפחותיהם — בכל העולם. כל פרופיל נבדק אישית, כל היכרות מחייבת הסכמה הדדית מלאה, ואתם בוחרים אם להתחבר ישירות או דרך שדכן — הפרטיות שלכם מוגנת בכל מקרה.",
+        "פלטפורמת שידוכים פרטית וקהילתית לרווקים שומרי תורה ומשפחותיהם — בכל העולם. פרופילים נבדקים אישית. הסכמה הדדית מלאה. הפרטיות שלכם מוגנת תמיד.",
       cta1: "צרו את הפרופיל שלכם",
       cta2: "ראו איך זה עובד",
       ctaArrow: "←",
@@ -274,31 +235,41 @@ const content = {
       { value: "אפשרות שדכן", label: "מובנית מהיסוד" },
       { value: "בכל העולם", label: "פתוח לקהילות יהודיות בכל מקום" },
     ],
+    community: {
+      sectionLabel: "הקהילה שלנו",
+      headline: "לכל קהילה תורנית",
+      subheading: "פלטפורמה אחת, לכל ביטוי יפה של חיים שומרי תורה.",
+      photos: [
+        { src: "/images/kallah.png", label: "כלות ורווקות", tag: "כל הקהילות" },
+        { src: "/images/charedi.png", label: "חרדי", tag: "מסורתי" },
+        { src: "/images/leumi.png", label: "דתי לאומי", tag: "ציוני דתי" },
+        { src: "/images/chabad.png", label: 'חב"ד', tag: "לובאוויטש" },
+      ],
+    },
     howItWorks: {
       sectionLabel: "התהליך",
       headline: "פשוט, פרטי ומונחה קהילה",
-      subheading:
-        "מהפרופיל הראשון ועד ההיכרות המאושרת — כל שלב בנוי סביב הכבוד והפרטיות שלכם.",
+      subheading: "מהפרופיל הראשון ועד ההיכרות המאושרת — כל שלב בנוי סביב הכבוד והפרטיות שלכם.",
       steps: [
         {
           step: "א",
           title: "בנו את הפרופיל שלכם",
-          desc: "אתם — או הורה או אפוטרופוס בשמכם — יוצרים פרופיל שידוכים מפורט המשקף מי אתם: הרקע שלכם, המשפחה, השקפת העולם, ומה אתם מחפשים. הפרופיל יסודי, כי שידוך משמעותי ראוי ליותר מכמה שורות.",
+          desc: "אתם — או הורה בשמכם — יוצרים פרופיל שידוכים מפורט: רקע, משפחה, השקפת עולם, ומה אתם מחפשים.",
         },
         {
           step: "ב",
-          title: "סקירה ואישור אישי",
-          desc: "לפני שהפרופיל שלכם מתפרסם, הוא נסקר אישית על ידי צוות לחופה. אנחנו בודקים כנות, שלמות ומתאימות לקהילה שלנו. זה לא מסנן אוטומטי — זה אדם אמיתי שקורא את הפרופיל שלכם ומוודא שכולם בלחופה שייכים לכאן.",
+          title: "סקירה אישית",
+          desc: "לפני פרסום, חבר בצוות שלנו סוקר כל פרופיל אישית לבדיקת כנות, שלמות ומתאימות.",
         },
         {
           step: "ג",
-          title: "עיינו בפרופילים והביעו עניין",
-          desc: "לאחר האישור, תוכלו לעיין בפרופילים מאושרים ולהביע עניין בכאלה שנראים מתאימים. כשמוצאים מישהו שתרצו ללמוד עליו יותר, בוחרים כיצד להמשיך — ישירות, או דרך שדכן.",
+          title: "עיינו והביעו עניין",
+          desc: "עיינו בפרופילים מאושרים והביעו עניין. בחרו אם להתקשר ישירות או דרך שדכן.",
         },
         {
           step: "ד",
           title: "התחברו בדרככם",
-          desc: "אם בחרתם בקשר ישיר, על שני הצדדים לאשר באופן עצמאי לפני שמישהו מהם רואה את פרטי הקשר של השני. אם אתם מעדיפים קשר דרך שדכן, שדכן רשום של לחופה ינהל את כל ההיכרות — יפנה לשני הצדדים, ינחה את התהליך ויוודא שפרטיכם פרטיים לאורך כל הדרך.",
+          desc: "קשר ישיר אפשרי רק לאחר שני הצדדים אישרו באופן עצמאי. או תנו לשדכן לנהל את ההיכרות — פרטיותכם מוגנת בכל מקרה.",
         },
       ],
     },
@@ -306,99 +277,50 @@ const content = {
     features: {
       sectionLabel: "למה לחופה",
       headline: "בנוי סביב ערכים יהודיים",
-      subheading:
-        "כל תכונה בלחופה קיימת מסיבה — כדי להפוך את תהליך השידוכים למכובד יותר, פרטי יותר, ומתאים יותר לדרך שהקהילה שלנו פועלת.",
+      subheading: "כל תכונה קיימת כדי להפוך את תהליך השידוכים למכובד, פרטי ומותאם לערכי הקהילה.",
       items: [
         {
           title: "פרטיות והסכמה הדדית",
-          description:
-            "פרטי הקשר שלכם לא מוצגים בפרופיל ולא משותפים ללא הסכמתכם המפורשת. קשר ישיר אפשרי רק לאחר שני הצדדים אישרו באופן עצמאי — הסכמה הדדית אינה הגדרה שמגדירים, היא מובנית בצורת עבודת הפלטפורמה.",
+          description: "פרטי הקשר שלכם לא מוצגים ולא משותפים ללא הסכמתכם. הסכמה הדדית אינה הגדרה — היא מובנית בצורת עבודת הפלטפורמה.",
         },
         {
           title: "היכרויות דרך שדכן",
-          description:
-            "למשפחות המעדיפות שכל הקשר יעבור דרך שדכן, לחופה מציעה בדיוק זאת — לא כתוספת, אלא כתכונה מרכזית. שדכן רשום של לחופה מנהל את ההיכרות, פונה לשני הצדדים ומוודא שפרטיכם לא יגיעו לצד השני.",
+          description: "למשפחות המעדיפות שכל הקשר יעבור דרך שדכן, לחופה מציעה זאת כתכונה מרכזית — לא כתוספת.",
         },
         {
-          title: "ניהול על ידי הורים ואפוטרופוסים",
-          description:
-            "הורים ואפוטרופוסים יכולים ליצור ולנהל פרופילים בשם בניהם ובנותיהם. משום שבקהילות רבות, שידוכים הם עניין משפחתי מהרגע הראשון — והפלטפורמה שלנו בנויה לשקף מציאות זו בכבוד ובהבנה.",
+          title: "ניהול על ידי הורים",
+          description: "הורים ואפוטרופוסים יכולים לנהל פרופילים בשם בניהם — כי שידוכים הם עניין משפחתי מהרגע הראשון.",
         },
         {
           title: "כל פרופיל נבדק אנושית",
-          description:
-            "כל פרופיל המוגש ללחופה נסקר אישית על ידי הצוות שלנו לפני פרסומו. אנחנו מוודאים שכל פנייה אמיתית, שלמה ומתאימה לקהילתנו. אין בוטים, אין פרופילים מזויפים — רק אנשים אמיתיים וכנים.",
+          description: "כל פרופיל נסקר אישית לפני פרסומו. אין בוטים, אין פרופילים מזויפים — רק אנשים אמיתיים וכנים.",
         },
         {
           title: "סטטוס שידוכים עדכני",
-          description:
-            "כל פרופיל מציג סטטוס שידוכים נוכחי — מחפש באופן פעיל, בתהליך שידוכים, מאורס/ת, או נשוי/נשואה. האפליקציה שולחת התראות push ברגע שמשהו מתעדכן — כדי שתמיד תהיו מעודכנים ולא תפספסו אף הזדמנות.",
+          description: "כל פרופיל מציג סטטוס נוכחי. התראות push מעדכנות אתכם ברגע שמשהו משתנה.",
         },
         {
           title: "לכל הקהילות התורניות",
-          description:
-            'לחופה משרתת את כל מגוון הקהילות שומרות התורה — חרדים, ליטאים, חב"ד, דתי לאומי, חרדל, מודרן אורתודוקס ועוד. אנחנו קהילה אחת עם ביטויים רבים ויפים, וכולם מוזמנים לכאן.',
+          description: 'חרדים, ליטאים, חב"ד, דתי לאומי, חרדל, מודרן אורתודוקס — לחופה משרתת את כל המגוון.',
         },
       ],
     },
     ring: {
       sectionLabel: "המחויבות שלנו",
       headline: "שידוכים רציניים, בכבוד ובצניעות",
-      body: "לחופה אינה אפליקציית היכרויות. היא פלטפורמה שנבנתה עבור אנשים הלוקחים את תהליך השידוכים ברצינות — ועבור משפחות שרוצות להיות מעורבות בכל שלב. ללא קיצורי דרך. ללא פשרות על הצניעות. ללא קשר ללא הסכמה. רק מסלול מחושב, פרטי ונתמך קהילה לחופה.",
+      body: "לחופה אינה אפליקציית היכרויות. היא פלטפורמה לאנשים הלוקחים את תהליך השידוכים ברצינות ולמשפחות שרוצות להיות מעורבות בכל שלב. ללא קיצורי דרך. ללא פשרות על הצניעות. ללא קשר ללא הסכמה.",
       cta: "צרו את הפרופיל שלכם",
       ctaArrow: "←",
     },
-    screenshots: {
-      sectionLabel: "מבט מקרוב",
-      headline: "ברור, פרטי וקל לשימוש",
-      subheading:
-        "מתוכנן להרגיש פשוט ומכובד — כדי שתוכלו להתמקד במציאת השידוך הנכון, ולא בהבנת התוכנה.",
-      appLabel: "לחופה",
-    },
-    mockScreens: [
-      {
-        title: "עיון בפרופילים",
-        desc: "חיפוש וסינון פרופילים מאושרים לפי רקע, קהילה והשקפת עולם",
-        gradient: "from-[#1E3A5F] to-[#2D5382]",
-        rows: [
-          { initials: "RL", name: "רוחי ל.", tag: "מחפשת" },
-          { initials: "SG", name: "שימי ג.", tag: "מחפשת" },
-          { initials: "DK", name: "דבורה כ.", tag: "מחפשת" },
-          { initials: "CW", name: "חני ו.", tag: "חדש" },
-        ],
-      },
-      {
-        title: "הביעו עניין",
-        desc: "בחרו קשר ישיר או דרך שדכן — פרטים משותפים רק בהסכמה הדדית",
-        gradient: "from-[#C9923F] to-[#A8731E]",
-        rows: [
-          { initials: "←", name: "קשר ישיר", tag: "הדדי בלבד" },
-          { initials: "ש", name: "דרך שדכן", tag: "פרטי" },
-          { initials: "✓", name: "שניהם אישרו", tag: "מחוברים" },
-          { initials: "🔒", name: "פרטים הועברו", tag: "מאובטח" },
-        ],
-      },
-      {
-        title: "מעקב התקדמות",
-        desc: "עקבו אחרי כל היכרות — מעניין ראשוני ועד שידוך מאושר",
-        gradient: "from-[#2D7A6B] to-[#1E5A4E]",
-        rows: [
-          { initials: "א", name: "פרופיל אושר", tag: "הושלם" },
-          { initials: "ב", name: "עניין הוצהר", tag: "ממתין" },
-          { initials: "ג", name: "שניהם אישרו", tag: "פעיל" },
-          { initials: "ד", name: "שידוך נעשה", tag: "מזל טוב" },
-        ],
-      },
-    ],
     about: {
       sectionLabel: "אודות לחופה",
       headline: "פלטפורמה שנבנתה על ידי הקהילה",
       body1:
-        "לחופה נולדה מצורך פשוט אך עמוק. תהליך השידוכים הוא אחד ממסעות החיים המשמעותיים ביותר בחיים היהודיים — ובכל זאת, הכלים הזמינים לתמיכה בו לא תמיד תאמו את הערכים של האנשים שהשתמשו בהם. אנחנו חברי קהילה בעצמנו, ובנינו את הפלטפורמה שרצינו שתהיה קיימת.",
+        "לחופה נולדה מצורך עמוק. תהליך השידוכים הוא אחד ממסעות החיים המשמעותיים ביותר — ובכל זאת, הכלים הזמינים לא תמיד תאמו את ערכי הקהילה. אנחנו חברי קהילה בעצמנו, ובנינו את הפלטפורמה שרצינו שתהיה קיימת.",
       body2:
-        "בלב כל מה שאנחנו עושים עומדת הצניעות. פרטי קשר אינם מוצגים בפרופיל. שום היכרות לא נעשית ללא הסכמה מלאה ומרצון של שני הצדדים. ועבור משפחות שרוצות שכל הקשר יעבור דרך שדכן — זו לא עקיפת מערכת. זו תכונה מרכזית, מובנית מהיסוד.",
+        "בלב כל מה שאנחנו עושים עומדת הצניעות. פרטי קשר אינם מוצגים. שום היכרות ללא הסכמה מלאה. ועבור משפחות שרוצות שהכל יעבור דרך שדכן — זו תכונה מרכזית, מובנית מהיסוד.",
       body3:
-        "אנחנו מאמינים שכנות חשובה יותר מכמות. לכן כל פרופיל נסקר אישית לפני פרסומו. אנחנו לא שואפים להיות הפלטפורמה הגדולה ביותר — אלא המהימנה ביותר. מקום שבו אנשים רציניים יכולים למצוא זה את זה בכבוד ובתמיכה.",
+        "אנחנו מאמינים שכנות חשובה יותר מכמות. כל פרופיל נסקר אישית. אנחנו לא שואפים להיות הפלטפורמה הגדולה ביותר — אלא המהימנה ביותר.",
       imageAlt: "שולחן חתונה ערוך בצורה אלגנטית",
       checklist: [
         "נבנה על ידי הקהילה",
@@ -410,8 +332,7 @@ const content = {
       ],
     },
     kotel: {
-      explanation:
-        "כל מי שזוכה לסייע לנשמה יהודית אחת למצוא את זיווגה — כאילו קיים עולם מלא.",
+      explanation: "כל מי שזוכה לסייע לנשמה יהודית אחת למצוא את זיווגה — כאילו קיים עולם מלא.",
     },
     faq: {
       sectionLabel: "שאלות נפוצות",
@@ -424,19 +345,19 @@ const content = {
         },
         {
           q: "מה ההבדל בין קשר ישיר לקשר דרך שדכן?",
-          a: "בקשר ישיר, שני הצדדים בוחנים באופן עצמאי את הפרופיל של השני ומחליטים אם לאשר. רק לאחר שניהם אישרו, כל אחד מקבל את פרטי הקשר של השני. בקשר דרך שדכן, שדכן רשום של לחופה מנהל את כל ההיכרות — פונה לשני הצדדים, מנחה את התהליך, ומאשר את ההתאמה ברגע ששניהם מסכימים להמשיך. במקרה זה, פרטי הקשר של אף אחד מהצדדים אינם משותפים עם השני.",
+          a: "בקשר ישיר, שני הצדדים בוחנים באופן עצמאי את הפרופיל של השני ומחליטים אם לאשר. רק לאחר שניהם אישרו, כל אחד מקבל את פרטי הקשר של השני. בקשר דרך שדכן, שדכן רשום של לחופה מנהל את כל ההיכרות — פונה לשני הצדדים, מנחה את התהליך, ומאשר את ההתאמה ברגע ששניהם מסכימים להמשיך.",
         },
         {
           q: "האם הורה או אפוטרופוס יכולים לנהל את הפרופיל שלי?",
-          a: "כן, בהחלט. פרופילים מנוהלים על ידי הורים ואפוטרופוסים נתמכים במלואם בלחופה. הורה או אפוטרופוס יכולים ליצור, לעדכן ולנהל פרופיל בשם בנם או בתם. זוהי גישה נפוצה ומכובדת בקהילות רבות, והפלטפורמה שלנו מתוכננת להכיל אותה באופן טבעי.",
+          a: "כן, בהחלט. פרופילים מנוהלים על ידי הורים ואפוטרופוסים נתמכים במלואם בלחופה. הורה או אפוטרופוס יכולים ליצור, לעדכן ולנהל פרופיל בשם בנם או בתם.",
         },
         {
           q: "כמה זמן לוקח אישור הפרופיל?",
-          a: "אנחנו שואפים לסקור ולאשר פרופילים בתוך יום עד שלושה ימי עסקים. כל פנייה נסקרת אישית על ידי חבר בצוות שלנו. אם הפרופיל שלכם דורש מידע נוסף או התאמות, נפנה אליכם ישירות.",
+          a: "אנחנו שואפים לסקור ולאשר פרופילים בתוך יום עד שלושה ימי עסקים. כל פנייה נסקרת אישית על ידי חבר בצוות שלנו.",
         },
         {
           q: "האם לחופה מיועדת לסוג קהילה מסוים?",
-          a: 'כלל לא. לחופה משרתת את כל מגוון הקהילות שומרות התורה — חרדים, ליטאים, חב"ד, דתי לאומי, חרדל, מודרן אורתודוקס ועוד. כל פרופיל כולל את הרקע והשקפת עולמו של הפרט, כך שמשתמשים יכולים למצוא התאמה באופן משמעותי עבורם.',
+          a: 'כלל לא. לחופה משרתת את כל מגוון הקהילות שומרות התורה — חרדים, ליטאים, חב"ד, דתי לאומי, חרדל, מודרן אורתודוקס ועוד.',
         },
       ],
     },
@@ -480,8 +401,7 @@ const content = {
         { label: "פורטל מנהל", href: "https://admin.lachuppah.app" },
       ],
       copyright: "© 2026 לחופה. כל הזכויות שמורות.",
-      legal:
-        "לחופה היא פלטפורמה קהילתית ואינה סוכנות שידוכים מורשית. כל ההיכרויות נעשות מרצון בין צדדים מסכימים.",
+      legal: "לחופה היא פלטפורמה קהילתית ואינה סוכנות שידוכים מורשית. כל ההיכרויות נעשות מרצון בין צדדים מסכימים.",
     },
   },
 } as const;
@@ -490,22 +410,22 @@ const content = {
    FEATURE ICONS (language-agnostic SVGs)
 ───────────────────────────────────────────── */
 const featureIcons = [
-  <svg key="privacy" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg key="privacy" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
   </svg>,
-  <svg key="shadchan" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+  <svg key="shadchan" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
   </svg>,
-  <svg key="parents" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg key="parents" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
   </svg>,
-  <svg key="review" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg key="review" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
   </svg>,
-  <svg key="status" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+  <svg key="status" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
   </svg>,
-  <svg key="community" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg key="community" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
   </svg>,
 ];
@@ -515,8 +435,8 @@ const featureIcons = [
 ───────────────────────────────────────────── */
 
 const inputCls =
-  "w-full border border-stone-200 rounded-xl px-4 py-3 text-sm text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-[#1E3A5F]/20 focus:border-[#1E3A5F] transition-colors bg-white";
-const labelCls = "block text-sm font-medium text-stone-700 mb-1.5";
+  "w-full border border-stone-200 rounded-2xl px-4 py-3 text-sm text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-[#1E3A5F]/20 focus:border-[#1E3A5F] transition-colors bg-white";
+const labelCls = "block text-sm font-medium text-stone-600 mb-1.5";
 
 export default function Home() {
   const [lang, setLang] = useState<Lang>("en");
@@ -525,6 +445,15 @@ export default function Home() {
 
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" });
   const [formStatus, setFormStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("fade-visible"); }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll("[data-fade]").forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -551,14 +480,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <a href="#" className="flex items-center gap-3">
-              <Image
-                src="/lachuppah-logo.png"
-                alt="LaChuppah"
-                width={36}
-                height={36}
-                className="object-contain"
-                priority
-              />
+              <Image src="/lachuppah-logo.png" alt="LaChuppah" width={36} height={36} className="object-contain" priority />
               <div>
                 <div className="text-xl font-bold text-[#1E3A5F] leading-tight">LaChuppah</div>
                 <div className="hidden sm:block text-xs text-stone-400 leading-tight">{t.nav.tagline}</div>
@@ -566,14 +488,13 @@ export default function Home() {
             </a>
 
             <nav className="hidden md:flex items-center gap-6">
-              <a href="#how-it-works" className="text-stone-600 hover:text-[#1E3A5F] text-sm font-medium transition-colors">{t.nav.howItWorks}</a>
-              <a href="#features" className="text-stone-600 hover:text-[#1E3A5F] text-sm font-medium transition-colors">{t.nav.features}</a>
-              <a href="#about" className="text-stone-600 hover:text-[#1E3A5F] text-sm font-medium transition-colors">{t.nav.about}</a>
-              <a href="#faq" className="text-stone-600 hover:text-[#1E3A5F] text-sm font-medium transition-colors">{t.nav.faq}</a>
+              <a href="#how-it-works" className="text-stone-500 hover:text-[#1E3A5F] text-sm font-medium transition-colors">{t.nav.howItWorks}</a>
+              <a href="#features" className="text-stone-500 hover:text-[#1E3A5F] text-sm font-medium transition-colors">{t.nav.features}</a>
+              <a href="#about" className="text-stone-500 hover:text-[#1E3A5F] text-sm font-medium transition-colors">{t.nav.about}</a>
+              <a href="#faq" className="text-stone-500 hover:text-[#1E3A5F] text-sm font-medium transition-colors">{t.nav.faq}</a>
             </nav>
 
             <div className="flex items-center gap-3">
-              {/* Language toggle */}
               <button
                 onClick={() => setLang(l => l === "en" ? "he" : "en")}
                 className="flex items-center gap-1 rounded-full border border-stone-200 px-3 py-1.5 text-sm hover:border-[#1E3A5F] transition-colors select-none"
@@ -583,11 +504,7 @@ export default function Home() {
                 <span className="text-stone-300 text-xs mx-0.5">|</span>
                 <span className={lang === "he" ? "font-semibold text-[#1E3A5F]" : "text-stone-400"}>עב</span>
               </button>
-
-              <a
-                href="#download"
-                className="bg-[#1E3A5F] text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-[#162D4A] transition-colors"
-              >
+              <a href="#download" className="bg-[#C9923F] hover:bg-[#B8812E] text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-colors shadow-sm">
                 {t.nav.createProfile}
               </a>
             </div>
@@ -595,43 +512,36 @@ export default function Home() {
         </div>
       </header>
 
-      {/* ── HERO — flowers.jpg background ── */}
-      <section className="relative text-white overflow-hidden">
+      {/* ── HERO ── */}
+      <section className="relative text-white overflow-hidden min-h-[90vh] flex items-center">
         <div className="absolute inset-0">
-          <Image
-            src="/images/flowers.jpg"
-            alt=""
-            fill
-            className="object-cover object-[35%_center]"
-            priority
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1E3A5F]/55 via-[#1E3A5F]/60 to-[#162D4A]/75" />
+          <Image src="/images/flowers.jpg" alt="" fill className="object-cover object-[35%_center]" priority sizes="100vw" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0D1F35]/60 via-[#1E3A5F]/65 to-[#162D4A]/80" />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-40 text-center">
-          <div className="inline-flex items-center gap-2 bg-[#1E3A5F]/80 backdrop-blur-sm border border-white/30 rounded-full px-4 py-1.5 text-sm font-medium text-[#F0C87A] mb-8">
+        <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-28 lg:py-40 text-center">
+          <div className="inline-flex items-center gap-2 bg-[#1E3A5F]/80 backdrop-blur-sm border border-white/25 rounded-full px-4 py-1.5 text-sm font-medium text-[#F0C87A] mb-8">
             <span>✦</span>
             <span>{t.hero.badge}</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6 drop-shadow-lg">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6 drop-shadow-xl">
             {t.hero.headlineLine1}{" "}
             <span className="text-[#C9923F]">{t.hero.headlineLine2}</span>
           </h1>
-          <p className="text-lg sm:text-xl text-blue-50 max-w-2xl mx-auto leading-relaxed mb-10 drop-shadow">
+          <p className="text-lg sm:text-xl text-blue-100 max-w-xl mx-auto leading-relaxed mb-12 drop-shadow">
             {t.hero.subheading}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#download"
-              className="inline-flex items-center justify-center gap-2 bg-[#C9923F] hover:bg-[#B8812E] text-white font-semibold px-8 py-4 rounded-full transition-all shadow-lg hover:shadow-xl"
+              className="inline-flex items-center justify-center gap-2 bg-[#C9923F] hover:bg-[#B8812E] text-white font-semibold px-10 py-4 rounded-full text-base transition-all shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
             >
               {t.hero.cta1}
               <span>{t.hero.ctaArrow}</span>
             </a>
             <a
               href="#how-it-works"
-              className="inline-flex items-center justify-center bg-white/15 hover:bg-white/25 border border-white/40 text-white font-semibold px-8 py-4 rounded-full transition-colors"
+              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-10 py-4 rounded-full text-base transition-all backdrop-blur-sm"
             >
               {t.hero.cta2}
             </a>
@@ -639,133 +549,121 @@ export default function Home() {
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 z-10">
-          <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block">
-            <path d="M0 60L1440 60L1440 0C1200 50 900 60 720 40C540 20 240 0 0 40L0 60Z" fill="#FDFAF6" />
+          <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block">
+            <path d="M0 80L1440 80L1440 0C1200 65 900 80 720 55C540 30 240 0 0 55L0 80Z" fill="#FDFAF6" />
           </svg>
         </div>
       </section>
 
       {/* ── TRUST SIGNALS ── */}
-      <section className="bg-[#FDFAF6] pt-4 pb-16">
+      <section className="bg-[#FDFAF6] pt-2 pb-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl shadow-sm border border-stone-100 overflow-hidden bg-stone-100">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-px">
-              {t.trust.map((stat) => (
-                <div key={stat.label} className="flex flex-col items-center py-7 px-4 text-center bg-white">
-                  <span className="text-base sm:text-lg font-bold text-[#1E3A5F]">{stat.value}</span>
-                  <span className="text-xs sm:text-sm text-stone-500 mt-1">{stat.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── HOW IT WORKS ── */}
-      <section id="how-it-works" className="bg-[#FDFAF6] py-16 lg:py-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <div className="text-sm font-semibold text-[#C9923F] uppercase tracking-widest mb-3">
-              {t.howItWorks.sectionLabel}
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1E3A5F] mb-4">
-              {t.howItWorks.headline}
-            </h2>
-            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              {t.howItWorks.subheading}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {t.howItWorks.steps.map((item) => (
-              <div
-                key={item.step}
-                className="bg-white rounded-2xl p-7 border border-stone-100 shadow-sm hover:shadow-md transition-shadow"
-              >
-                <div className="text-4xl font-bold text-[#C9923F]/20 mb-3 leading-none">{item.step}</div>
-                <h3 className="text-lg font-semibold text-[#1E3A5F] mb-3">{item.title}</h3>
-                <p className="text-stone-600 leading-relaxed text-sm">{item.desc}</p>
+          <div className="flex flex-wrap justify-center gap-3" data-fade>
+            {t.trust.map((stat) => (
+              <div key={stat.label} className="flex items-center gap-2 bg-white border border-stone-100 rounded-full px-5 py-2.5 shadow-sm">
+                <span className="text-sm font-bold text-[#1E3A5F]">{stat.value}</span>
+                <span className="text-stone-300 text-xs">·</span>
+                <span className="text-xs text-stone-500">{stat.label}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── KEYBOARD DIVIDER ── */}
-      <div className="relative h-28 sm:h-32 overflow-hidden">
-        <Image
-          src="/images/keyboard.jpg"
-          alt=""
-          fill
-          className="object-cover object-top"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-[#0A1628]/87" />
+      {/* ── COMMUNITY PHOTOS ── */}
+      <section className="bg-[#FDFAF6] py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14" data-fade>
+            <p className="text-sm font-semibold text-[#C9923F] uppercase tracking-widest mb-3">{t.community.sectionLabel}</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1E3A5F] mb-3">{t.community.headline}</h2>
+            <p className="text-stone-500 text-lg">{t.community.subheading}</p>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+            {t.community.photos.map((photo, i) => (
+              <div key={i} data-fade data-delay={String(i + 1)} className="group relative rounded-3xl overflow-hidden shadow-lg aspect-[3/4] cursor-pointer">
+                <Image
+                  src={photo.src}
+                  alt={photo.label}
+                  fill
+                  className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1E3A5F]/85 via-[#1E3A5F]/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <span className="inline-block text-[10px] font-semibold text-[#F0C87A] uppercase tracking-widest mb-1">{photo.tag}</span>
+                  <p className="text-white font-bold text-lg leading-tight">{photo.label}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── HOW IT WORKS ── */}
+      <section id="how-it-works" className="bg-white py-20 lg:py-28">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16" data-fade>
+            <p className="text-sm font-semibold text-[#C9923F] uppercase tracking-widest mb-3">{t.howItWorks.sectionLabel}</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1E3A5F] mb-4">{t.howItWorks.headline}</h2>
+            <p className="text-lg text-stone-500 max-w-xl mx-auto">{t.howItWorks.subheading}</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {t.howItWorks.steps.map((item, i) => (
+              <div key={item.step} data-fade data-delay={String(i + 1)} className="bg-[#FDFAF6] rounded-3xl p-8 border border-stone-100 hover:border-[#C9923F]/30 hover:shadow-md transition-all">
+                <div className="text-5xl font-black text-[#C9923F]/15 mb-4 leading-none">{item.step}</div>
+                <h3 className="text-lg font-bold text-[#1E3A5F] mb-2">{item.title}</h3>
+                <p className="text-stone-500 leading-relaxed text-sm">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── DIVIDER STRIP ── */}
+      <div className="relative h-24 sm:h-28 overflow-hidden">
+        <Image src="/images/ring.jpg" alt="" fill className="object-cover object-center" sizes="100vw" />
+        <div className="absolute inset-0 bg-[#1E3A5F]/88" />
         <div className="relative z-10 h-full flex items-center justify-center px-4">
-          <p className="text-base sm:text-lg font-medium text-blue-100 tracking-wide text-center max-w-2xl">
+          <p className="text-base sm:text-lg font-medium text-blue-100 tracking-wide text-center max-w-2xl italic">
             {t.divider}
           </p>
         </div>
       </div>
 
       {/* ── FEATURES ── */}
-      <section id="features" className="bg-white py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="text-sm font-semibold text-[#C9923F] uppercase tracking-widest mb-3">
-              {t.features.sectionLabel}
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1E3A5F] mb-4">
-              {t.features.headline}
-            </h2>
-            <p className="text-lg text-stone-600 max-w-2xl mx-auto">
-              {t.features.subheading}
-            </p>
+      <section id="features" className="bg-[#FDFAF6] py-20 lg:py-28">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16" data-fade>
+            <p className="text-sm font-semibold text-[#C9923F] uppercase tracking-widest mb-3">{t.features.sectionLabel}</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1E3A5F] mb-4">{t.features.headline}</h2>
+            <p className="text-lg text-stone-500 max-w-xl mx-auto">{t.features.subheading}</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {t.features.items.map((feature, i) => (
-              <div
-                key={i}
-                className="group bg-[#FDFAF6] rounded-2xl p-7 border border-stone-100 hover:border-[#1E3A5F]/20 hover:shadow-md transition-all"
-              >
-                <div className="w-12 h-12 bg-[#1E3A5F]/10 text-[#1E3A5F] rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#1E3A5F] group-hover:text-white transition-colors">
+              <div key={i} data-fade data-delay={String((i % 3) + 1)} className="group bg-white rounded-3xl p-7 border border-stone-100 hover:border-[#1E3A5F]/15 hover:shadow-lg transition-all">
+                <div className="w-11 h-11 bg-[#1E3A5F]/8 text-[#1E3A5F] rounded-2xl flex items-center justify-center mb-5 group-hover:bg-[#1E3A5F] group-hover:text-white transition-colors">
                   {featureIcons[i]}
                 </div>
-                <h3 className="text-lg font-semibold text-stone-900 mb-2">{feature.title}</h3>
-                <p className="text-stone-600 leading-relaxed text-sm">{feature.description}</p>
+                <h3 className="text-base font-bold text-stone-900 mb-2">{feature.title}</h3>
+                <p className="text-stone-500 leading-relaxed text-sm">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── RING SECTION — values statement ── */}
-      <section className="relative overflow-hidden py-24 lg:py-36">
+      {/* ── RING / VALUES STATEMENT ── */}
+      <section className="relative overflow-hidden py-28 lg:py-40">
         <div className="absolute inset-0">
-          <Image
-            src="/images/ring.jpg"
-            alt=""
-            fill
-            className="object-cover object-center"
-            sizes="100vw"
-          />
-          <div className={`absolute inset-0 ${isHe ? "bg-gradient-to-l" : "bg-gradient-to-r"} from-[#1E3A5F]/95 via-[#1E3A5F]/80 to-[#1E3A5F]/65`} />
+          <Image src="/images/flowers.jpg" alt="" fill className="object-cover object-center" sizes="100vw" />
+          <div className={`absolute inset-0 ${isHe ? "bg-gradient-to-l" : "bg-gradient-to-r"} from-[#1E3A5F]/97 via-[#1E3A5F]/85 to-[#1E3A5F]/60`} />
         </div>
-
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
-            <div className="text-sm font-semibold text-[#C9923F] uppercase tracking-widest mb-4">
-              {t.ring.sectionLabel}
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-              {t.ring.headline}
-            </h2>
-            <p className="text-lg text-blue-100 leading-relaxed mb-8">
-              {t.ring.body}
-            </p>
-            <a
-              href="#download"
-              className="inline-flex items-center gap-2 bg-[#C9923F] hover:bg-[#B8812E] text-white font-semibold px-7 py-3.5 rounded-full transition-colors shadow-lg"
-            >
+          <div className="max-w-xl" data-fade>
+            <p className="text-sm font-semibold text-[#C9923F] uppercase tracking-widest mb-4">{t.ring.sectionLabel}</p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">{t.ring.headline}</h2>
+            <p className="text-lg text-blue-100 leading-relaxed mb-10">{t.ring.body}</p>
+            <a href="#download" className="inline-flex items-center gap-2 bg-[#C9923F] hover:bg-[#B8812E] text-white font-semibold px-8 py-4 rounded-full transition-all shadow-xl hover:-translate-y-0.5">
               {t.ring.cta}
               <span>{t.ring.ctaArrow}</span>
             </a>
@@ -773,38 +671,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── ABOUT — table.jpg as elegant side image ── */}
+      {/* ── ABOUT ── */}
       <section id="about" className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="order-2 lg:order-1">
-              <div className="relative h-80 sm:h-96 lg:h-[480px] rounded-3xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/table.jpg"
-                  alt={t.about.imageAlt}
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1E3A5F]/30 via-transparent to-transparent" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="order-2 lg:order-1" data-fade>
+              <div className="grid grid-cols-2 gap-3 h-[480px]">
+                <div className="relative rounded-3xl overflow-hidden row-span-2 shadow-xl">
+                  <Image src="/images/kallah.png" alt="" fill className="object-cover object-top" sizes="25vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1E3A5F]/40 to-transparent" />
+                </div>
+                <div className="relative rounded-3xl overflow-hidden shadow-xl">
+                  <Image src="/images/charedi.png" alt="" fill className="object-cover object-top" sizes="25vw" />
+                </div>
+                <div className="relative rounded-3xl overflow-hidden shadow-xl">
+                  <Image src="/images/leumi.png" alt="" fill className="object-cover object-top" sizes="25vw" />
+                </div>
               </div>
             </div>
 
-            <div className="order-1 lg:order-2">
-              <div className="text-sm font-semibold text-[#C9923F] uppercase tracking-widest mb-3">
-                {t.about.sectionLabel}
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#1E3A5F] mb-6 leading-tight">
-                {t.about.headline}
-              </h2>
-              <p className="text-stone-600 leading-relaxed mb-5">{t.about.body1}</p>
-              <p className="text-stone-600 leading-relaxed mb-5">{t.about.body2}</p>
-              <p className="text-stone-600 leading-relaxed mb-8">{t.about.body3}</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="order-1 lg:order-2" data-fade data-delay="2">
+              <p className="text-sm font-semibold text-[#C9923F] uppercase tracking-widest mb-3">{t.about.sectionLabel}</p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#1E3A5F] mb-6 leading-tight">{t.about.headline}</h2>
+              <p className="text-stone-600 leading-relaxed mb-5 text-base">{t.about.body1}</p>
+              <p className="text-stone-600 leading-relaxed mb-8 text-base">{t.about.body2}</p>
+              <div className="grid grid-cols-2 gap-3">
                 {t.about.checklist.map((item) => (
                   <div key={item} className="flex items-center gap-2.5 text-sm text-stone-700">
-                    <div className="w-5 h-5 rounded-full bg-[#1E3A5F] flex items-center justify-center flex-shrink-0">
-                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="w-5 h-5 rounded-full bg-[#C9923F]/15 text-[#C9923F] flex items-center justify-center flex-shrink-0">
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
@@ -818,22 +713,16 @@ export default function Home() {
       </section>
 
       {/* ── KOTEL STRIP ── */}
-      <div className="relative overflow-hidden py-14 sm:py-16">
+      <div className="relative overflow-hidden py-16 sm:py-20">
         <div className="absolute inset-0">
-          <Image
-            src="/images/kotel.jpg"
-            alt=""
-            fill
-            className="object-cover object-[center_25%]"
-            sizes="100vw"
-          />
+          <Image src="/images/kotel.jpg" alt="" fill className="object-cover object-[center_25%]" sizes="100vw" />
           <div className="absolute inset-0 bg-[#1E3A5F]/88" />
         </div>
-        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <p className="text-base sm:text-xl font-semibold text-[#F0C87A] mb-3 leading-relaxed" dir="rtl">
+        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white" data-fade>
+          <p className="text-lg sm:text-2xl font-semibold text-[#F0C87A] mb-3 leading-relaxed" dir="rtl">
             כָּל הַמְקַיֵּם נֶפֶשׁ אַחַת מִיִּשְׂרָאֵל — מַעֲלֶה עָלָיו הַכָּתוּב כְּאִלּוּ קִיֵּם עוֹלָם מָלֵא
           </p>
-          <p className="text-xs sm:text-sm text-blue-200 max-w-lg mx-auto leading-relaxed mt-2">
+          <p className="text-sm text-blue-200 max-w-lg mx-auto leading-relaxed mt-3">
             {t.kotel.explanation}
           </p>
         </div>
@@ -842,53 +731,39 @@ export default function Home() {
       {/* ── FAQ ── */}
       <section id="faq" className="bg-[#FDFAF6] py-20 lg:py-28">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <div className="text-sm font-semibold text-[#C9923F] uppercase tracking-widest mb-3">
-              {t.faq.sectionLabel}
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1E3A5F] mb-4">
-              {t.faq.headline}
-            </h2>
-            <p className="text-lg text-stone-600">{t.faq.subheading}</p>
+          <div className="text-center mb-14" data-fade>
+            <p className="text-sm font-semibold text-[#C9923F] uppercase tracking-widest mb-3">{t.faq.sectionLabel}</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1E3A5F] mb-4">{t.faq.headline}</h2>
+            <p className="text-lg text-stone-500">{t.faq.subheading}</p>
           </div>
           <div className="space-y-4">
             {t.faq.items.map((faq, i) => (
-              <div key={i} className="bg-white rounded-2xl p-6 sm:p-7 border border-stone-100 shadow-sm">
-                <h3 className="font-semibold text-[#1E3A5F] mb-3 text-base">{faq.q}</h3>
-                <p className="text-stone-600 leading-relaxed text-sm">{faq.a}</p>
+              <div key={i} data-fade data-delay={String((i % 3) + 1)} className="bg-white rounded-3xl p-7 border border-stone-100 shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="font-bold text-[#1E3A5F] mb-3 text-base">{faq.q}</h3>
+                <p className="text-stone-500 leading-relaxed text-sm">{faq.a}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── DOWNLOAD — balloons.jpg ── */}
-      <section id="download" className="relative overflow-hidden py-24 lg:py-32">
+      {/* ── DOWNLOAD ── */}
+      <section id="download" className="relative overflow-hidden py-28 lg:py-36">
         <div className="absolute inset-0">
-          <Image
-            src="/images/balloons.jpg"
-            alt=""
-            fill
-            className="object-cover object-center"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1E3A5F]/80 via-[#1E3A5F]/75 to-[#162D4A]/85" />
+          <Image src="/images/balloons.jpg" alt="" fill className="object-cover object-center" sizes="100vw" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#1E3A5F]/85 via-[#1E3A5F]/80 to-[#162D4A]/90" />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <div className="text-sm font-semibold text-[#F0C87A] uppercase tracking-widest mb-3">
-            {t.download.sectionLabel}
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t.download.headline}</h2>
-          <p className="text-lg text-blue-100 mb-12 max-w-lg mx-auto leading-relaxed">
-            {t.download.subheading}
-          </p>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white" data-fade>
+          <p className="text-sm font-semibold text-[#F0C87A] uppercase tracking-widest mb-3">{t.download.sectionLabel}</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">{t.download.headline}</h2>
+          <p className="text-lg text-blue-100 mb-12 max-w-lg mx-auto leading-relaxed">{t.download.subheading}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://apps.apple.com/app/id6762863228"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-4 bg-white/15 hover:bg-white/25 border border-white/30 text-white px-7 py-4 rounded-2xl transition-colors shadow-md backdrop-blur-sm"
+              className="inline-flex items-center gap-4 bg-white/12 hover:bg-white/22 border border-white/25 text-white px-7 py-4 rounded-2xl transition-all shadow-lg backdrop-blur-sm hover:-translate-y-0.5"
             >
               <svg className="w-8 h-8 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98l-.06.04c-1.02.63-1.7 1.67-1.69 2.92.01 1.47.88 2.75 2.11 3.28zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
@@ -903,7 +778,7 @@ export default function Home() {
               href="https://play.google.com/store/apps/details?id=com.lachupa.lachupah"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-4 bg-white/15 hover:bg-white/25 border border-white/30 text-white px-7 py-4 rounded-2xl transition-colors shadow-md backdrop-blur-sm"
+              className="inline-flex items-center gap-4 bg-white/12 hover:bg-white/22 border border-white/25 text-white px-7 py-4 rounded-2xl transition-all shadow-lg backdrop-blur-sm hover:-translate-y-0.5"
             >
               <svg className="w-8 h-8 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199a1 1 0 01.002 1.732L15.394 12l2.302-2.302 2.302-2.302a.996.996 0 01-.302 2.112zM5.864 2.658L16.8 8.99l-2.302 2.302-8.635-8.634z" />
@@ -915,15 +790,9 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Web app fallback — subordinate to store buttons */}
-          <div className="mt-8 pt-6 border-t border-white/15 text-center">
+          <div className="mt-10 pt-6 border-t border-white/12 text-center">
             <p className="text-blue-300 text-sm mb-2">{t.download.webNote}</p>
-            <a
-              href="https://app.lachuppah.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/70 hover:text-white text-sm underline underline-offset-4 transition-colors"
-            >
+            <a href="https://app.lachuppah.app" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white text-sm underline underline-offset-4 transition-colors">
               {t.download.webCta}
             </a>
           </div>
@@ -933,20 +802,16 @@ export default function Home() {
       {/* ── CONTACT FORM ── */}
       <section id="contact" className="bg-white py-20 lg:py-28">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="text-sm font-semibold text-[#C9923F] uppercase tracking-widest mb-3">
-              {t.contactForm.sectionLabel}
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1E3A5F] mb-4">
-              {t.contactForm.headline}
-            </h2>
-            <p className="text-lg text-stone-600">{t.contactForm.subheading}</p>
+          <div className="text-center mb-12" data-fade>
+            <p className="text-sm font-semibold text-[#C9923F] uppercase tracking-widest mb-3">{t.contactForm.sectionLabel}</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1E3A5F] mb-4">{t.contactForm.headline}</h2>
+            <p className="text-lg text-stone-500">{t.contactForm.subheading}</p>
           </div>
 
-          <div className="bg-[#FDFAF6] rounded-3xl border border-stone-100 shadow-sm p-8 sm:p-10">
+          <div className="bg-[#FDFAF6] rounded-3xl border border-stone-100 shadow-sm p-8 sm:p-10" data-fade data-delay="1">
             {formStatus === "success" ? (
-              <div className="text-center py-10">
-                <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="text-center py-12">
+                <div className="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-5">
                   <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
@@ -958,88 +823,43 @@ export default function Home() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className={labelCls}>{t.contactForm.fields.firstName.label}</label>
-                    <input
-                      type="text"
-                      required
-                      className={inputCls}
-                      placeholder={t.contactForm.fields.firstName.placeholder}
-                      value={form.firstName}
-                      onChange={e => setForm(f => ({ ...f, firstName: e.target.value }))}
-                    />
+                    <input type="text" required className={inputCls} placeholder={t.contactForm.fields.firstName.placeholder} value={form.firstName} onChange={e => setForm(f => ({ ...f, firstName: e.target.value }))} />
                   </div>
                   <div>
                     <label className={labelCls}>{t.contactForm.fields.lastName.label}</label>
-                    <input
-                      type="text"
-                      required
-                      className={inputCls}
-                      placeholder={t.contactForm.fields.lastName.placeholder}
-                      value={form.lastName}
-                      onChange={e => setForm(f => ({ ...f, lastName: e.target.value }))}
-                    />
+                    <input type="text" required className={inputCls} placeholder={t.contactForm.fields.lastName.placeholder} value={form.lastName} onChange={e => setForm(f => ({ ...f, lastName: e.target.value }))} />
                   </div>
                 </div>
-
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className={labelCls}>{t.contactForm.fields.email.label}</label>
-                    <input
-                      type="email"
-                      required
-                      className={inputCls}
-                      placeholder={t.contactForm.fields.email.placeholder}
-                      value={form.email}
-                      onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
-                    />
+                    <input type="email" required className={inputCls} placeholder={t.contactForm.fields.email.placeholder} value={form.email} onChange={e => setForm(f => ({ ...f, email: e.target.value }))} />
                   </div>
                   <div>
                     <label className={labelCls}>{t.contactForm.fields.phone.label}</label>
-                    <input
-                      type="tel"
-                      className={inputCls}
-                      placeholder={t.contactForm.fields.phone.placeholder}
-                      value={form.phone}
-                      onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
-                    />
+                    <input type="tel" className={inputCls} placeholder={t.contactForm.fields.phone.placeholder} value={form.phone} onChange={e => setForm(f => ({ ...f, phone: e.target.value }))} />
                   </div>
                 </div>
-
                 <div>
                   <label className={labelCls}>{t.contactForm.fields.subject.label}</label>
-                  <select
-                    className={inputCls}
-                    value={form.subject}
-                    onChange={e => setForm(f => ({ ...f, subject: e.target.value }))}
-                  >
+                  <select className={inputCls} value={form.subject} onChange={e => setForm(f => ({ ...f, subject: e.target.value }))}>
                     <option value="">{t.contactForm.fields.subject.placeholder}</option>
-                    {t.contactForm.fields.subject.options.map(o => (
-                      <option key={o} value={o}>{o}</option>
-                    ))}
+                    {t.contactForm.fields.subject.options.map(o => <option key={o} value={o}>{o}</option>)}
                   </select>
                 </div>
-
                 <div>
                   <label className={labelCls}>{t.contactForm.fields.message.label}</label>
-                  <textarea
-                    required
-                    rows={5}
-                    className={inputCls}
-                    placeholder={t.contactForm.fields.message.placeholder}
-                    value={form.message}
-                    onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
-                  />
+                  <textarea required rows={5} className={inputCls} placeholder={t.contactForm.fields.message.placeholder} value={form.message} onChange={e => setForm(f => ({ ...f, message: e.target.value }))} />
                 </div>
-
                 {formStatus === "error" && (
-                  <p className="text-sm text-red-600 bg-red-50 border border-red-100 rounded-xl px-4 py-3">
+                  <p className="text-sm text-red-600 bg-red-50 border border-red-100 rounded-2xl px-4 py-3">
                     {t.contactForm.error}
                   </p>
                 )}
-
                 <button
                   type="submit"
                   disabled={formStatus === "sending"}
-                  className="w-full bg-[#1E3A5F] hover:bg-[#162D4A] disabled:opacity-60 text-white font-semibold py-3.5 rounded-full transition-colors"
+                  className="w-full bg-[#1E3A5F] hover:bg-[#162D4A] disabled:opacity-60 text-white font-semibold py-4 rounded-full transition-colors text-base shadow-sm"
                 >
                   {formStatus === "sending" ? t.contactForm.sending : t.contactForm.submit}
                 </button>
@@ -1050,32 +870,22 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="bg-[#1E3A5F] text-white py-12">
+      <footer className="bg-[#1E3A5F] text-white py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-8 pb-8 border-b border-white/10">
             <a href="#" className="flex items-center gap-3">
-              <Image
-                src="/lachuppah-logo.png"
-                alt="LaChuppah"
-                width={36}
-                height={36}
-                className="object-contain opacity-90"
-              />
+              <Image src="/lachuppah-logo.png" alt="LaChuppah" width={36} height={36} className="object-contain opacity-90" />
               <span className="text-xl font-bold">LaChuppah</span>
             </a>
-            <nav className="flex flex-wrap justify-center gap-6 text-sm text-blue-200">
+            <nav className="flex flex-wrap justify-center gap-6 text-sm text-blue-300">
               {t.footer.navLinks.map((link) => (
-                <a key={link.href} href={link.href} className="hover:text-white transition-colors">
-                  {link.label}
-                </a>
+                <a key={link.href} href={link.href} className="hover:text-white transition-colors">{link.label}</a>
               ))}
             </nav>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-blue-300">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-blue-400">
             <p>{t.footer.copyright}</p>
-            <p className="text-xs text-blue-400 text-center md:text-end max-w-md">
-              {t.footer.legal}
-            </p>
+            <p className="text-xs text-blue-500 text-center md:text-end max-w-md">{t.footer.legal}</p>
           </div>
         </div>
       </footer>
