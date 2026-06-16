@@ -513,94 +513,153 @@ export default function Home() {
       </header>
 
       {/* ── HERO ── */}
-      <section className="relative text-white overflow-hidden min-h-[90vh] flex items-center">
-        <div className="absolute inset-0">
-          <Image src="/images/flowers.jpg" alt="" fill className="object-cover object-[35%_center]" priority sizes="100vw" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0D1F35]/60 via-[#1E3A5F]/65 to-[#162D4A]/80" />
+      <section className="bg-[#1E3A5F] text-white overflow-hidden">
+
+        {/* Desktop: 3-column — leumi | text | chabad+charedi */}
+        <div className="hidden lg:grid min-h-[92vh] grid-cols-[1.2fr_1fr_1.2fr]">
+
+          {/* Left — leumi (landscape, up to 20% side crop to allow taller display) */}
+          <div className={`relative flex items-center justify-center bg-[#0C1E33] overflow-hidden ${isHe ? "order-3" : "order-1"}`}>
+            <div className="absolute top-10 left-8 w-56 h-56 rounded-full border border-[#C9923F]/10 pointer-events-none" />
+            <div className="absolute bottom-10 right-6 w-36 h-36 rounded-full border border-[#C9923F]/8 pointer-events-none" />
+            <div style={{ transform: 'rotate(-5deg)' }}>
+              <div className="bg-white p-[7px] shadow-[0_32px_72px_rgba(0,0,0,0.7)]">
+                {/* 430×403: display width 717px, crops 143px per side = 20% */}
+                <div className="relative overflow-hidden" style={{ width: '430px', height: '403px' }}>
+                  <Image
+                    src="/images/leumi.png"
+                    alt=""
+                    fill
+                    className="object-cover object-center"
+                    sizes="700px"
+                    quality={90}
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Center — text */}
+          <div className="order-2 flex flex-col justify-center px-8 xl:px-10 py-16">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-4 py-1.5 text-sm font-medium text-[#F0C87A] mb-8 self-start">
+              <span>✦</span>
+              <span>{t.hero.badge}</span>
+            </div>
+            <h1 className="text-4xl xl:text-5xl 2xl:text-6xl font-bold leading-[1.08] tracking-tight mb-6">
+              {t.hero.headlineLine1}{" "}
+              <span className="text-[#C9923F]">{t.hero.headlineLine2}</span>
+            </h1>
+            <p className="text-base xl:text-lg text-blue-200 leading-relaxed mb-10">
+              {t.hero.subheading}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#download"
+                className="inline-flex items-center justify-center gap-2 bg-[#C9923F] hover:bg-[#B8812E] text-white font-semibold px-7 py-4 rounded-full text-sm transition-all shadow-lg hover:-translate-y-0.5"
+              >
+                {t.hero.cta1}
+                <span>{t.hero.ctaArrow}</span>
+              </a>
+              <a
+                href="#how-it-works"
+                className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/25 text-white font-semibold px-7 py-4 rounded-full text-sm transition-all"
+              >
+                {t.hero.cta2}
+              </a>
+            </div>
+            <div className="mt-10 pt-8 border-t border-white/10 flex flex-col gap-2.5">
+              {t.trust.map((stat) => (
+                <div key={stat.label} className="flex items-center gap-2.5 text-sm">
+                  <span className="text-[#C9923F] text-base leading-none">✦</span>
+                  <span className="font-semibold text-white">{stat.value}</span>
+                  <span className="text-white/30">—</span>
+                  <span className="text-blue-200">{stat.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right — chabad (landscape) + charedi (portrait), stacked */}
+          <div className={`relative flex flex-col items-center justify-center gap-4 bg-[#0C1E33] overflow-hidden px-2 py-2 ${isHe ? "order-1" : "order-3"}`}>
+            <div className="absolute top-8 right-8 w-48 h-48 rounded-full border border-[#C9923F]/10 pointer-events-none" />
+            <div className="absolute bottom-8 left-6 w-32 h-32 rounded-full border border-[#C9923F]/8 pointer-events-none" />
+
+            {/* chabad — landscape 4:3 (1448×1086), natural ratio */}
+            <div style={{ transform: 'rotate(4deg)' }}>
+              <div className="bg-white p-[7px] shadow-[0_28px_64px_rgba(0,0,0,0.65)]">
+                <Image
+                  src="/images/chabad.png"
+                  alt=""
+                  width={1448}
+                  height={1086}
+                  style={{ width: '430px', height: 'auto', display: 'block' }}
+                  sizes="860px"
+                  quality={90}
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* charedi — portrait (1122×1402), natural ratio */}
+            <div style={{ transform: 'rotate(-3deg)' }}>
+              <div className="bg-white p-[7px] shadow-[0_28px_64px_rgba(0,0,0,0.6)]">
+                <Image
+                  src="/images/charedi.png"
+                  alt=""
+                  width={1122}
+                  height={1402}
+                  style={{ width: '370px', height: 'auto', display: 'block' }}
+                  sizes="740px"
+                  quality={90}
+                />
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-28 lg:py-40 text-center">
-          <div className="inline-flex items-center gap-2 bg-[#1E3A5F]/80 backdrop-blur-sm border border-white/25 rounded-full px-4 py-1.5 text-sm font-medium text-[#F0C87A] mb-8">
-            <span>✦</span>
-            <span>{t.hero.badge}</span>
+        {/* Mobile: text then photos */}
+        <div className="lg:hidden">
+          <div className="flex flex-col justify-center px-6 py-16">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-4 py-1.5 text-sm font-medium text-[#F0C87A] mb-6 self-start">
+              <span>✦</span>
+              <span>{t.hero.badge}</span>
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-bold leading-[1.08] tracking-tight mb-5">
+              {t.hero.headlineLine1}{" "}
+              <span className="text-[#C9923F]">{t.hero.headlineLine2}</span>
+            </h1>
+            <p className="text-base text-blue-200 leading-relaxed mb-8">{t.hero.subheading}</p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a href="#download" className="inline-flex items-center justify-center gap-2 bg-[#C9923F] hover:bg-[#B8812E] text-white font-semibold px-7 py-4 rounded-full text-sm transition-all shadow-lg">
+                {t.hero.cta1}<span>{t.hero.ctaArrow}</span>
+              </a>
+              <a href="#how-it-works" className="inline-flex items-center justify-center bg-white/10 border border-white/25 text-white font-semibold px-7 py-4 rounded-full text-sm transition-all">
+                {t.hero.cta2}
+              </a>
+            </div>
           </div>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-6 drop-shadow-xl">
-            {t.hero.headlineLine1}{" "}
-            <span className="text-[#C9923F]">{t.hero.headlineLine2}</span>
-          </h1>
-          <p className="text-lg sm:text-xl text-blue-100 max-w-xl mx-auto leading-relaxed mb-12 drop-shadow">
-            {t.hero.subheading}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#download"
-              className="inline-flex items-center justify-center gap-2 bg-[#C9923F] hover:bg-[#B8812E] text-white font-semibold px-10 py-4 rounded-full text-base transition-all shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
-            >
-              {t.hero.cta1}
-              <span>{t.hero.ctaArrow}</span>
-            </a>
-            <a
-              href="#how-it-works"
-              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-10 py-4 rounded-full text-base transition-all backdrop-blur-sm"
-            >
-              {t.hero.cta2}
-            </a>
+          <div className="relative h-64 overflow-hidden flex">
+            {[{ src: "/images/leumi.png", w: 1672, h: 941 }, { src: "/images/charedi.png", w: 1122, h: 1402 }, { src: "/images/chabad.png", w: 1448, h: 1086 }].map((img, i) => (
+              <div key={i} className="relative flex-1 overflow-hidden">
+                <Image src={img.src} alt="" fill className="object-cover object-top" sizes="33vw" />
+                <div className="absolute inset-0 bg-[#0C1E33]/20" />
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 z-10">
-          <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block">
-            <path d="M0 80L1440 80L1440 0C1200 65 900 80 720 55C540 30 240 0 0 55L0 80Z" fill="#FDFAF6" />
+        {/* Wave transition to cream */}
+        <div className="relative -mb-1">
+          <svg viewBox="0 0 1440 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block">
+            <path d="M0 64L1440 64L1440 0C1200 52 900 64 720 44C540 24 240 0 0 44L0 64Z" fill="#FDFAF6" />
           </svg>
         </div>
       </section>
 
-      {/* ── TRUST SIGNALS ── */}
-      <section className="bg-[#FDFAF6] pt-2 pb-16">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-3" data-fade>
-            {t.trust.map((stat) => (
-              <div key={stat.label} className="flex items-center gap-2 bg-white border border-stone-100 rounded-full px-5 py-2.5 shadow-sm">
-                <span className="text-sm font-bold text-[#1E3A5F]">{stat.value}</span>
-                <span className="text-stone-300 text-xs">·</span>
-                <span className="text-xs text-stone-500">{stat.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── COMMUNITY PHOTOS ── */}
-      <section className="bg-[#FDFAF6] py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14" data-fade>
-            <p className="text-sm font-semibold text-[#C9923F] uppercase tracking-widest mb-3">{t.community.sectionLabel}</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1E3A5F] mb-3">{t.community.headline}</h2>
-            <p className="text-stone-500 text-lg">{t.community.subheading}</p>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
-            {t.community.photos.map((photo, i) => (
-              <div key={i} data-fade data-delay={String(i + 1)} className="group relative rounded-3xl overflow-hidden shadow-lg aspect-[3/4] cursor-pointer">
-                <Image
-                  src={photo.src}
-                  alt={photo.label}
-                  fill
-                  className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1E3A5F]/85 via-[#1E3A5F]/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <span className="inline-block text-[10px] font-semibold text-[#F0C87A] uppercase tracking-widest mb-1">{photo.tag}</span>
-                  <p className="text-white font-bold text-lg leading-tight">{photo.label}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── HOW IT WORKS ── */}
-      <section id="how-it-works" className="bg-white py-20 lg:py-28">
+      <section id="how-it-works" className="bg-white py-16 lg:py-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16" data-fade>
             <p className="text-sm font-semibold text-[#C9923F] uppercase tracking-widest mb-3">{t.howItWorks.sectionLabel}</p>
@@ -609,10 +668,10 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {t.howItWorks.steps.map((item, i) => (
-              <div key={item.step} data-fade data-delay={String(i + 1)} className="bg-[#FDFAF6] rounded-3xl p-8 border border-stone-100 hover:border-[#C9923F]/30 hover:shadow-md transition-all">
-                <div className="text-5xl font-black text-[#C9923F]/15 mb-4 leading-none">{item.step}</div>
-                <h3 className="text-lg font-bold text-[#1E3A5F] mb-2">{item.title}</h3>
-                <p className="text-stone-500 leading-relaxed text-sm">{item.desc}</p>
+              <div key={item.step} data-fade data-delay={String(i + 1)} className="bg-[#1E3A5F] rounded-3xl p-8 hover:bg-[#162D4A] transition-all">
+                <div className="text-5xl font-black text-[#C9923F]/40 mb-4 leading-none">{item.step}</div>
+                <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
+                <p className="text-blue-200 leading-relaxed text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
