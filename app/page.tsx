@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 type Lang = "en" | "he";
 
@@ -941,6 +942,13 @@ export default function Home() {
                 <a key={link.href} href={link.href} className="hover:text-white transition-colors">{link.label}</a>
               ))}
             </nav>
+          </div>
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 mb-6 text-sm text-blue-300">
+            <Link href="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
+            <span className="text-blue-600 select-none">|</span>
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <span className="text-blue-600 select-none">|</span>
+            <Link href="/safety" className="hover:text-white transition-colors">Safety & Community Rules</Link>
           </div>
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-blue-400">
             <p>{t.footer.copyright}</p>
