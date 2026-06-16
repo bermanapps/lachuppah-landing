@@ -460,7 +460,11 @@ export default function Home() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      if (!res.ok) throw new Error();
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        console.error("[LaChuppah contact form error]", body);
+        throw new Error();
+      }
       setFormStatus("success");
       setForm({ firstName: "", lastName: "", email: "", phone: "", subject: "", message: "" });
     } catch {
