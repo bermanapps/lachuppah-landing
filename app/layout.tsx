@@ -14,9 +14,9 @@ const heebo = Heebo({
 });
 
 export const metadata: Metadata = {
-  title: "LaChuppah — Dignified Shidduchim for Torah-Observant Singles",
+  title: "LaChuppah — Modern Jewish Dating, Done Right",
   description:
-    "LaChuppah is a private, community-based shidduch platform for Torah-observant singles and their families. Every profile is personally reviewed, every introduction requires full mutual consent.",
+    "LaChuppah helps Jewish singles, parents, and matchmakers connect in a private, respectful, and thoughtful way. Reviewed profiles. Mutual consent before any contact.",
 };
 
 export default function RootLayout({
