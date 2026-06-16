@@ -12,7 +12,7 @@ type Lang = "en" | "he";
 const content = {
   en: {
     nav: {
-      tagline: "Modern Jewish dating, built with care",
+      tagline: "Frum Jewish dating, built with care",
       howItWorks: "How It Works",
       features: "Features",
       about: "About",
