@@ -22,8 +22,8 @@ const content = {
     },
     hero: {
       badge: "Private, reviewed, and built for Jewish singles",
-      headlineLine1: "Frum dating app,",
-      headlineLine2: "done right.",
+      headlineLine1: "LaChuppah,",
+      headlineLine2: "dating app.",
       subheading:
         "LaChuppah helps singles, parents, and matchmakers connect in a respectful, private, and thoughtful way — with reviewed profiles and contact only when both sides agree.",
       cta1: "Create Your Profile",
