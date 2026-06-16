@@ -21,7 +21,7 @@ const content = {
       admin: "Admin Login",
     },
     hero: {
-      badge: "Private, reviewed, and built for Jewish singles",
+      badge: "Private, reviewed, and built for frum Jewish singles",
       headlineLine1: "LaChuppah,",
       headlineLine2: "dating app.",
       subheading:
