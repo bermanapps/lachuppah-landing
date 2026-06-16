@@ -640,13 +640,10 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="relative h-64 overflow-hidden flex">
-            {[{ src: "/images/leumi.png", w: 1672, h: 941 }, { src: "/images/charedi.png", w: 1122, h: 1402 }, { src: "/images/chabad.png", w: 1448, h: 1086 }].map((img, i) => (
-              <div key={i} className="relative flex-1 overflow-hidden">
-                <Image src={img.src} alt="" fill className="object-cover object-top" sizes="33vw" />
-                <div className="absolute inset-0 bg-[#0C1E33]/20" />
-              </div>
-            ))}
+          <div className="flex flex-col">
+            <Image src="/images/leumi.png" alt="" width={1672} height={941} style={{ width: '100%', height: 'auto', display: 'block' }} sizes="100vw" quality={90} />
+            <Image src="/images/chabad.png" alt="" width={1448} height={1086} style={{ width: '100%', height: 'auto', display: 'block' }} sizes="100vw" quality={90} />
+            <Image src="/images/charedi.png" alt="" width={1122} height={1402} style={{ width: '100%', height: 'auto', display: 'block' }} sizes="100vw" quality={90} />
           </div>
         </div>
 
