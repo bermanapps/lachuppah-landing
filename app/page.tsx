@@ -11,7 +11,7 @@ type Lang = "en" | "he";
 const content = {
   en: {
     nav: {
-      tagline: "Dignified shidduchim for serious singles",
+      tagline: "Thoughtful shidduchim for serious singles",
       howItWorks: "How It Works",
       features: "Features",
       about: "About",
@@ -20,8 +20,8 @@ const content = {
       admin: "Admin Login",
     },
     hero: {
-      badge: "A dignified, private platform for Torah-observant singles",
-      headlineLine1: "Shidduchim with Dignity.",
+      badge: "A private, community-driven platform for Torah-observant singles",
+      headlineLine1: "Shidduchim with Purpose.",
       headlineLine2: "Every Time.",
       subheading:
         "A private, community-based platform for Torah-observant singles and families — worldwide. Human-reviewed profiles. Full mutual consent. Your privacy, always protected.",
@@ -49,12 +49,12 @@ const content = {
     howItWorks: {
       sectionLabel: "The Process",
       headline: "Simple, Private, and Community-Driven",
-      subheading: "From first profile to confirmed introduction — every step built around dignity and privacy.",
+      subheading: "From first profile to confirmed introduction — every step built around care and privacy.",
       steps: [
         {
           step: "01",
           title: "Build Your Profile",
-          desc: "You — or a parent on your behalf — create a detailed shidduch profile: background, family, hashkafah, and what you're looking for.",
+          desc: "You — or a parent on your behalf — create a detailed shidduch profile: background, family, hashkafah, and what you are looking for.",
         },
         {
           step: "02",
@@ -69,7 +69,7 @@ const content = {
         {
           step: "04",
           title: "Connect on Your Terms",
-          desc: "Direct contact only happens once both parties independently accept. Or let a shadchan manage the introduction — your privacy protected either way.",
+          desc: "Direct contact only becomes possible once both parties have independently accepted. A shadchan can manage the introduction instead — your privacy is protected either way.",
         },
       ],
     },
@@ -77,11 +77,11 @@ const content = {
     features: {
       sectionLabel: "Why LaChuppah",
       headline: "Built Around Jewish Values",
-      subheading: "Every feature exists to make the shidduch process more dignified, more private, and more in keeping with our community's values.",
+      subheading: "Every feature on LaChuppah exists for a reason — to make the shidduch process more thoughtful, more private, and more true to our values.",
       items: [
         {
           title: "Privacy & Mutual Consent",
-          description: "Your contact details are never visible on your profile and are never shared without your explicit agreement. Mutual consent is not a setting — it's built into how the platform works.",
+          description: "Your contact details are never visible on your profile and are never shared without your explicit agreement. Mutual consent is not a setting — it is built into how the platform works.",
         },
         {
           title: "Shadchan-Facilitated Introductions",
@@ -89,7 +89,7 @@ const content = {
         },
         {
           title: "Parent & Guardian Management",
-          description: "Parents and guardians can create and manage profiles on behalf of their sons or daughters — because shidduchim are a family endeavour from the very beginning.",
+          description: "Shidduchim are a family endeavour from the very beginning. Parents and guardians can create and manage profiles on behalf of their sons or daughters — the platform is built to reflect that naturally.",
         },
         {
           title: "Every Profile, Human-Reviewed",
@@ -97,7 +97,7 @@ const content = {
         },
         {
           title: "Live Dating Status",
-          description: "Every profile shows a current status — looking, dating, engaged, or married. Push notifications keep you updated the moment anything changes.",
+          description: "Every profile shows a current dating status — actively looking, currently dating, or engaged. Push notifications keep you updated the moment anything changes.",
         },
         {
           title: "For All Observant Communities",
@@ -107,18 +107,18 @@ const content = {
     },
     ring: {
       sectionLabel: "Our Commitment",
-      headline: "Serious shidduchim, done with dignity",
-      body: "LaChuppah is not a dating app. It is a platform built for people who take the shidduch process seriously — and for families who want to be involved every step of the way. No shortcuts. No compromises on tznius. No contact without consent.",
+      headline: "Serious shidduchim, done properly",
+      body: "LaChuppah is not a dating app. It is a platform built for people who take the shidduch process seriously, and for families who want to be involved every step of the way. No shortcuts. No contact without consent.",
       cta: "Create Your Profile",
       ctaArrow: "→",
     },
     about: {
       sectionLabel: "About LaChuppah",
-      headline: "A Platform Built by the Community",
+      headline: "Our Story",
       body1:
-        "LaChuppah was born from a deeply felt need. The shidduch process is one of the most meaningful endeavours in Jewish life — and yet the tools available often felt out of step with community values. We are members of the community ourselves, and we built the platform we wished existed.",
+        "LaChuppah was built out of a deeply felt need. The shidduch process is one of the most meaningful endeavours in Jewish life — and yet the tools available often felt out of step with the values of the people using them. We are members of the community ourselves. We built the platform we wished existed.",
       body2:
-        "At the heart of everything we do is tznius. Contact details are never displayed. No introduction without full, voluntary consent. And for families who want all contact through a shadchan — that is a core feature, built in from the beginning.",
+        "Contact details are never displayed on a profile. No introduction is made without the full, voluntary consent of both parties. For families who want all contact to go through a shadchan, that is a core feature — built in from the very beginning, not added on.",
       body3:
         "We believe sincerity matters more than volume. Every profile is personally reviewed. We are not trying to be the biggest platform — we are trying to be the most trustworthy one.",
       imageAlt: "An elegantly set wedding celebration table",
@@ -139,7 +139,7 @@ const content = {
       sectionLabel: "Common Questions",
       headline: "Frequently Asked Questions",
       subheading:
-        "Have a question not answered here? Use the contact form below — we're happy to help.",
+        "Have a question not answered here? Use the contact form below — we are happy to help.",
       items: [
         {
           q: "Is my contact information safe?",
@@ -177,7 +177,7 @@ const content = {
       sectionLabel: "Get in Touch",
       headline: "Contact Us",
       subheading:
-        "Have a question or need help? Fill in the form and we'll get back to you.",
+        "Have a question or need help? Fill in the form and we will get back to you.",
       fields: {
         firstName: { label: "First Name", placeholder: "e.g. Reuven" },
         lastName: { label: "Last Name", placeholder: "e.g. Cohen" },
@@ -192,7 +192,7 @@ const content = {
       },
       submit: "Send Message",
       sending: "Sending…",
-      success: "Thank you — we'll be in touch soon.",
+      success: "Thank you — we will be in touch soon.",
       error: "Something went wrong. Please try again or email us at support@lachuppah.app.",
     },
     footer: {
@@ -220,8 +220,8 @@ const content = {
       admin: "כניסת מנהל",
     },
     hero: {
-      badge: "פלטפורמה פרטית ומכובדת לרווקים שומרי תורה",
-      headlineLine1: "שידוכים בכבוד.",
+      badge: "פלטפורמה פרטית וקהילתית לרווקים שומרי תורה",
+      headlineLine1: "שידוכים ברצינות.",
       headlineLine2: "תמיד.",
       subheading:
         "פלטפורמת שידוכים פרטית וקהילתית לרווקים שומרי תורה ומשפחותיהם — בכל העולם. פרופילים נבדקים אישית. הסכמה הדדית מלאה. הפרטיות שלכם מוגנת תמיד.",
@@ -248,8 +248,8 @@ const content = {
     },
     howItWorks: {
       sectionLabel: "התהליך",
-      headline: "פשוט, פרטי ומונחה קהילה",
-      subheading: "מהפרופיל הראשון ועד ההיכרות המאושרת — כל שלב בנוי סביב הכבוד והפרטיות שלכם.",
+      headline: "פשוט, פרטי וקהילתי",
+      subheading: "מהפרופיל הראשון ועד ההיכרות המאושרת — כל שלב בנוי סביב הזהירות והפרטיות שלכם.",
       steps: [
         {
           step: "א",
@@ -269,7 +269,7 @@ const content = {
         {
           step: "ד",
           title: "התחברו בדרככם",
-          desc: "קשר ישיר אפשרי רק לאחר שני הצדדים אישרו באופן עצמאי. או תנו לשדכן לנהל את ההיכרות — פרטיותכם מוגנת בכל מקרה.",
+          desc: "קשר ישיר אפשרי רק לאחר שני הצדדים אישרו באופן עצמאי. שדכן יכול לנהל את ההיכרות במקומכם — פרטיותכם מוגנת בכל מקרה.",
         },
       ],
     },
@@ -277,7 +277,7 @@ const content = {
     features: {
       sectionLabel: "למה לחופה",
       headline: "בנוי סביב ערכים יהודיים",
-      subheading: "כל תכונה קיימת כדי להפוך את תהליך השידוכים למכובד, פרטי ומותאם לערכי הקהילה.",
+      subheading: "כל תכונה קיימת כדי להפוך את תהליך השידוכים ליסודי, פרטי ומותאם לדרך שהקהילה שלנו פועלת.",
       items: [
         {
           title: "פרטיות והסכמה הדדית",
@@ -289,7 +289,7 @@ const content = {
         },
         {
           title: "ניהול על ידי הורים",
-          description: "הורים ואפוטרופוסים יכולים לנהל פרופילים בשם בניהם — כי שידוכים הם עניין משפחתי מהרגע הראשון.",
+          description: "שידוכים הם עניין משפחתי מהרגע הראשון. הורים ואפוטרופוסים יכולים לנהל פרופילים בשם בניהם ובנותיהם — הפלטפורמה בנויה לשקף זאת באופן טבעי.",
         },
         {
           title: "כל פרופיל נבדק אנושית",
@@ -307,18 +307,18 @@ const content = {
     },
     ring: {
       sectionLabel: "המחויבות שלנו",
-      headline: "שידוכים רציניים, בכבוד ובצניעות",
-      body: "לחופה אינה אפליקציית היכרויות. היא פלטפורמה לאנשים הלוקחים את תהליך השידוכים ברצינות ולמשפחות שרוצות להיות מעורבות בכל שלב. ללא קיצורי דרך. ללא פשרות על הצניעות. ללא קשר ללא הסכמה.",
+      headline: "שידוכים רציניים, כפי שצריך.",
+      body: "לחופה אינה אפליקציית היכרויות. היא פלטפורמה לאנשים הלוקחים את תהליך השידוכים ברצינות, ולמשפחות שרוצות להיות מעורבות בכל שלב. ללא קיצורי דרך. ללא קשר ללא הסכמה.",
       cta: "צרו את הפרופיל שלכם",
       ctaArrow: "←",
     },
     about: {
       sectionLabel: "אודות לחופה",
-      headline: "פלטפורמה שנבנתה על ידי הקהילה",
+      headline: "הסיפור שלנו",
       body1:
-        "לחופה נולדה מצורך עמוק. תהליך השידוכים הוא אחד ממסעות החיים המשמעותיים ביותר — ובכל זאת, הכלים הזמינים לא תמיד תאמו את ערכי הקהילה. אנחנו חברי קהילה בעצמנו, ובנינו את הפלטפורמה שרצינו שתהיה קיימת.",
+        "לחופה נבנתה מתוך צורך אמיתי ועמוק. תהליך השידוכים הוא אחד ממסעות החיים המשמעותיים ביותר — ובכל זאת, הכלים הזמינים לא תמיד תאמו את ערכי האנשים שהשתמשו בהם. אנחנו חברי קהילה בעצמנו. בנינו את הפלטפורמה שרצינו שתהיה קיימת.",
       body2:
-        "בלב כל מה שאנחנו עושים עומדת הצניעות. פרטי קשר אינם מוצגים. שום היכרות ללא הסכמה מלאה. ועבור משפחות שרוצות שהכל יעבור דרך שדכן — זו תכונה מרכזית, מובנית מהיסוד.",
+        "פרטי קשר אינם מוצגים בפרופיל. שום היכרות אינה נעשית ללא הסכמה מלאה ומרצון של שני הצדדים. למשפחות שרוצות שכל הקשר יעבור דרך שדכן, זו תכונה מרכזית — מובנית מהיסוד, לא תוספת.",
       body3:
         "אנחנו מאמינים שכנות חשובה יותר מכמות. כל פרופיל נסקר אישית. אנחנו לא שואפים להיות הפלטפורמה הגדולה ביותר — אלא המהימנה ביותר.",
       imageAlt: "שולחן חתונה ערוך בצורה אלגנטית",
