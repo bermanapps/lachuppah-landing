@@ -731,24 +731,24 @@ export default function Home() {
 
       {/* ── ABOUT ── */}
       <section id="about" className="bg-white py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="order-2 lg:order-1" data-fade>
-              <div className="grid grid-cols-2 gap-3 h-[480px]">
-                <div className="relative rounded-3xl overflow-hidden row-span-2 shadow-xl">
-                  <Image src="/images/kallah.png" alt="" fill className="object-cover object-top" sizes="25vw" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1E3A5F]/40 to-transparent" />
-                </div>
-                <div className="relative rounded-3xl overflow-hidden shadow-xl">
-                  <Image src="/images/charedi.png" alt="" fill className="object-cover object-top" sizes="25vw" />
-                </div>
-                <div className="relative rounded-3xl overflow-hidden shadow-xl">
-                  <Image src="/images/leumi.png" alt="" fill className="object-cover object-top" sizes="25vw" />
-                </div>
-              </div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
+
+            {/* Kallah — portrait, full column height */}
+            <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[2/3] lg:aspect-auto order-2 lg:order-1" data-fade>
+              <Image
+                src="/images/kallah.png"
+                alt=""
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={90}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1E3A5F]/20 to-transparent" />
             </div>
 
-            <div className="order-1 lg:order-2" data-fade data-delay="2">
+            {/* Text */}
+            <div className="flex flex-col justify-center order-1 lg:order-2" data-fade data-delay="2">
               <p className="text-sm font-semibold text-[#C9923F] uppercase tracking-widest mb-3">{t.about.sectionLabel}</p>
               <h2 className="text-3xl sm:text-4xl font-bold text-[#1E3A5F] mb-6 leading-tight">{t.about.headline}</h2>
               <p className="text-stone-600 leading-relaxed mb-5 text-base">{t.about.body1}</p>
@@ -766,6 +766,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
+
           </div>
         </div>
       </section>
