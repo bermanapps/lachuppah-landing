@@ -640,10 +640,12 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="flex flex-col">
-            <Image src="/images/leumi.png" alt="" width={1672} height={941} style={{ width: '100%', height: 'auto', display: 'block' }} sizes="100vw" quality={90} />
-            <Image src="/images/chabad.png" alt="" width={1448} height={1086} style={{ width: '100%', height: 'auto', display: 'block' }} sizes="100vw" quality={90} />
-            <Image src="/images/charedi.png" alt="" width={1122} height={1402} style={{ width: '100%', height: 'auto', display: 'block' }} sizes="100vw" quality={90} />
+          <div className="flex flex-col gap-3 px-4 pb-8">
+            {["/images/leumi.png", "/images/chabad.png", "/images/charedi.png"].map((src, i) => (
+              <div key={i} className="relative overflow-hidden rounded-2xl" style={{ height: '260px' }}>
+                <Image src={src} alt="" fill className="object-cover object-center" sizes="100vw" quality={90} />
+              </div>
+            ))}
           </div>
         </div>
 
